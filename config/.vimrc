@@ -214,7 +214,7 @@ Plug 'mhartington/oceanic-next'       " Themes
 Plug 'wakatime/vim-wakatime'
 
 " ------------------------------------------------------------------------------
-" Plugins / Terminal multiplexer / Tmux
+" Plugins / Terminal multiplexer / Vimux
 " ------------------------------------------------------------------------------
 Plug 'benmills/vimux'  " Tmux
 
@@ -224,7 +224,7 @@ Plug 'benmills/vimux'  " Tmux
 Plug 'tyewang/vimux-jest-test'  " vimux-jest-test
 
 " ------------------------------------------------------------------------------
-" Plugins / Testing / Jest
+" Plugins / Testing / vim-test
 " ------------------------------------------------------------------------------
 Plug 'janko-m/vim-test' " vim-test
 
@@ -433,7 +433,7 @@ nnoremap <leader>gs :Git<CR>
 "let g:javascript_conceal_underscore_arrow_function = "🞅"
 
 " ------------------------------------------------------------------------------
-" Plugin options / Vim-polyglot: python-syntax options
+" Plugin options / Vim-polyglot: python-syntax
 " ------------------------------------------------------------------------------
 " Enables all syntax highlighting features
 let g:python_highlight_all = 1
