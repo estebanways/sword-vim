@@ -1,0 +1,9 @@
+# Ignore both directories and files with this name
+**/plugged/
+
+# Ignore certain files within a directory with spaces
+#my\ directory/*.txt
+
+# Ignore all files with a certain pattern that includes spaces in their name
+#*my* *.txt
+
