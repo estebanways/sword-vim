@@ -1,3 +1,20 @@
+--
+--------------------------------------------------------------------------------
+--         FILE:  .wezterm.lua
+--        USAGE:  --- 
+--  DESCRIPTION:  Sets up a WezTerm terminal
+--      OPTIONS:  ---
+-- REQUIREMENTS:  WezTerm terminal
+--         BUGS:  ---
+--        NOTES:  ---
+--       AUTHOR:  Esteban Herrera Castro, stv.herrera@gmail.com
+--      COMPANY:  ---
+--      VERSION:  1.0
+--      CREATED:  31/10/23
+--     REVISION:  ---
+--------------------------------------------------------------------------------
+--
+
 local wezterm = require 'wezterm';
 return {
   --font = wezterm.font("JetBrains Mono"),
