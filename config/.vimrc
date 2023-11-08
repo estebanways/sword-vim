@@ -21,7 +21,8 @@ set cursorline              " Underline the current line
 set encoding=utf-8          " Defines encoding
 set showmatch               " Highlights the matching parentheses
 set sw=2                    " Changes tabulation with TAB to 2 spaces
-set relativenumber          " Displays the distance from the current line to every other line
+set relativenumber          " Displays the distance from the current line to every
+                            " other line.
 
 " Searching
 set hlsearch                " Highlight matches
@@ -66,8 +67,8 @@ call plug#begin('~/.vim/plugged')
 " Plugins / Auto-complete / repeat.vim
 " ------------------------------------------------------------------------------
 " Press . to repeat the last command.
-" '... you were likely disappointed to discover it only repeated the last native
-" command inside that map, rather than the map as a whole.'
+" "... you were likely disappointed to discover it only repeated the last native
+" command inside that map, rather than the map as a whole."
 " Works with particular plugins.
 " Works with vim-surround.
 Plug 'tpope/vim-repeat'
@@ -85,9 +86,9 @@ Plug 'honza/vim-snippets'
 " ------------------------------------------------------------------------------
 " Plugins / Auto-complete / Coc.nvim
 " ------------------------------------------------------------------------------
-" Coc.nvim, or Conquer of completion.
+" Coc.nvim, or Conquer of completion
 " True snippet and additional text editing support
-" Use release branch (recommended.)
+" Use release branch (recommended)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Or build from source code by using yarn: https://yarnpkg.com
@@ -97,13 +98,12 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " coc-json - json
 " coc-tsserver - TypeScript
 " coc-css - CSS
-" coc-kite - Kite LS manager compatibility plugins
 " ADD-HERE
 
 " ------------------------------------------------------------------------------
 " Plugins / Auto-complete / Copilot.vim
 " ------------------------------------------------------------------------------
-Plug 'github/copilot.vim'  " GitHub's Copilot'
+Plug 'github/copilot.vim'  " GitHub's Copilot
 
 " ------------------------------------------------------------------------------
 " Plugins / Typing / closetag
@@ -113,7 +113,7 @@ Plug 'alvan/vim-closetag'  " Creates closing HTML like tags when typing
 " ------------------------------------------------------------------------------
 " Plugins / Typing / surround.vim
 " ------------------------------------------------------------------------------
-Plug 'tpope/vim-surround'  " It's all about surroundings: parentheses, brackets,
+Plug 'tpope/vim-surround'  " It's all about "surroundings": parentheses, brackets,
                            " quotes, XML tags, and more.
 
 " ------------------------------------------------------------------------------
@@ -149,8 +149,7 @@ Plug 'christoomey/vim-tmux-navigator'
 " ------------------------------------------------------------------------------
 " Plugins / IDE / fzf
 " ------------------------------------------------------------------------------
-" fzf
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }  " fzf
 
 " ------------------------------------------------------------------------------
 " Plugins / IDE / vim-signify
@@ -247,9 +246,6 @@ nmap <Leader>w :w<CR>
 " Quit file
 nmap <Leader>q :q<CR>
 
-"let g:deoplete#enable_at_startup = 1
-"let g:jsx_ext_required = 0
-
 " Run current file with node.js
 nnoremap <Leader>x :!node %<cr>
 
@@ -261,8 +257,7 @@ nmap <Leader>s <Plug>(easymotion-s2)
 " ------------------------------------------------------------------------------
 " Plugin options / Grubvox
 " ------------------------------------------------------------------------------
-"colorscheme gruvbox
-"let g:gruvbox_contrast_dark = "hard" 
+"let g:gruvbox_contrast_dark = "hard"  "colorscheme gruvbox
 
 " ------------------------------------------------------------------------------
 " Plugin options / Oceanic-next
@@ -276,7 +271,6 @@ colorscheme OceanicNext
 " ------------------------------------------------------------------------------
 " Plugin options / Nerdtree
 " ------------------------------------------------------------------------------
-" NERDTree configuration
 let g:NERDTreeChDirMode=2
 "let g:NERDTreeIgnore=['\.rbc$', '\~$', '\.pyc$', '\.db$', '\.sqlite$', '__pycache__']
 "let g:NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$', '\.bak$', '\~$']
@@ -288,10 +282,8 @@ let g:NERDTreeQuitOnOpen=1
 "set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
 nnoremap <silent> <F2> :NERDTreeFind<CR>
 noremap <F3> :NERDTreeToggle<CR>
-" set shortcut for open Nerdtree
-map <C-n> :NERDTreeToggle<CR>
-" Make Nerdtree show .files by default
-let NERDTreeShowHidden=1
+map <C-n> :NERDTreeToggle<CR>  " set shortcut for open Nerdtree
+let NERDTreeShowHidden=1  " Make Nerdtree show .files by default
 
 " ------------------------------------------------------------------------------
 " Plugin options / UltiSnips
@@ -303,25 +295,8 @@ let NERDTreeShowHidden=1
 let g:UtilSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
-
-" ------------------------------------------------------------------------------
-" Plugin options / Kite
-" ------------------------------------------------------------------------------
-" Configuring supported languages
-" Python, JavaScript, Go
-"let g:kite_supported_languages = ['python', 'javascript', 'go']
-" All the languages Kite supports
-"let g:kite_supported_languages = ['*']
-
-" Turn off Kite
-let g:kite_supported_languages = []
-
-" Allow particular coc extensions to work, to avoid turning off Kite
-let g:coc_global_extensions = [
-      \ 'coc-tsserver'
-      \ ]
+let g:UltiSnipsEditSplit="vertical"  " If you want :UltiSnipsEdit to split your
+                                     " window.
 
 " ------------------------------------------------------------------------------
 " Plugin options / Coc.nvim
@@ -330,24 +305,18 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
-
-" For scss files, you may need use:
-autocmd FileType scss setl iskeyword+=@-@
+autocmd FileType scss setl iskeyword+=@-@  " For scss files, you may need use this
 
 " ------------------------------------------------------------------------------
 " Plugin options / vim-fugitive
 " ------------------------------------------------------------------------------
-" Fugitive always vertical diffing
-set diffopt+=vertical
-
-" git status
-nnoremap <leader>gs :Git<CR>
+set diffopt+=vertical  " Fugitive always vertical diffing
+nnoremap <leader>gs :Git<CR>  " git status
 
 " ------------------------------------------------------------------------------
 " Plugin options / fzf
 " ------------------------------------------------------------------------------
-" Search input above
-"let $FZF_DEFAULT_OPTS='--layout=reverse'
+"let $FZF_DEFAULT_OPTS='--layout=reverse'  " Search input above
 
 " ------------------------------------------------------------------------------
 " Plugin options / Styled-components
@@ -375,8 +344,8 @@ nnoremap <leader>gs :Git<CR>
 
 " Disables Autoindent
 "let g:polyglot_disabled = ['autoindent']
-" Reindent
 
+" Reindent
 " Disables reindenting of the current line in insert mode (see vim 'indentkeys'),
 " by turning it off.
 "autocmd BufEnter * set indentexpr=
@@ -477,7 +446,8 @@ let g:indentLine_char = '|'
 " Change Conceal Behaviour
 " See the VIM Reference Manual for more information on the conceal feature.
 
-" indentLine will overwrite your "concealcursor" and "conceallevel" with default value
+" indentLine will overwrite your "concealcursor" and "conceallevel" with default
+" value.
 "let g:indentLine_concealcursor = 'inc'
 "let g:indentLine_conceallevel = 2
 
@@ -496,8 +466,7 @@ let g:indentLine_char = '|'
 " ------------------------------------------------------------------------------
 " Plugin options / nerdcommenter
 " ------------------------------------------------------------------------------
-" Leverage support for selections
-" (keys leader + 'c' ...)
+" Leverage support for selections (keys: Leader + c + option)
 nnoremap <silent> <leader>c} V}:call NERDComment('x', 'toggle')<CR>
 nnoremap <silent> <leader>c{ V{:call NERDComment('x', 'toggle')<CR>
 
@@ -508,43 +477,44 @@ nnoremap <silent> <leader>c{ V{:call NERDComment('x', 'toggle')<CR>
 let g:lightline = {
       \ 'colorscheme': 'ayu_dark',
       \ 'active': {
-      \		'left': [ [ 'mode', 'paste' ],
+      \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
-			\		'right': [ [ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_infos', 'linter_ok' ],
-			\							 [ 'lineinfo' ],
-			\              [ 'percent' ],
-			\              [ 'fileformat', 'fileencoding', 'filetype', 'charvaluehex' ] ]
+      \  'right': [ [ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_infos', 'linter_ok' ],
+      \              [ 'lineinfo' ],
+      \              [ 'percent' ],
+      \              [ 'fileformat', 'fileencoding', 'filetype', 'charvaluehex' ] ]
       \ },
-			\ 'component': {
-			\   'charvaluehex': '0x%B'
-			\ },
+      \ 'component': {
+      \   'charvaluehex': '0x%B'
+      \ },
       \ 'component_function': {
       \   'gitbranch': 'FugitiveHead'
       \ },
       \ }
 
 " Lightline plugin ALE options
-" Register the components:
-" Overrides the previous declation, resetting the custom bar configuration:
+
+" Overrides the previous declaration, resetting the custom bar configuration
 "let g:lightline = {}
 
+" Register the components
 " Components
 let g:lightline.component_expand = {
-			\  'linter_checking': 'lightline#ale#checking',
-			\  'linter_infos': 'lightline#ale#infos',
-			\  'linter_warnings': 'lightline#ale#warnings',
-			\  'linter_errors': 'lightline#ale#errors',
-			\  'linter_ok': 'lightline#ale#ok',
-			\ }
+      \  'linter_checking': 'lightline#ale#checking',
+      \  'linter_infos': 'lightline#ale#infos',
+      \  'linter_warnings': 'lightline#ale#warnings',
+      \  'linter_errors': 'lightline#ale#errors',
+      \  'linter_ok': 'lightline#ale#ok',
+      \ }
 
-" Set color to the components:
+" Set color to the components
 let g:lightline.component_type = {
-			\     'linter_checking': 'right',
-			\     'linter_infos': 'right',
-			\     'linter_warnings': 'warning',
-			\     'linter_errors': 'error',
-			\     'linter_ok': 'right',
-			\ }
+      \     'linter_checking': 'right',
+      \     'linter_infos': 'right',
+      \     'linter_warnings': 'warning',
+      \     'linter_errors': 'error',
+      \     'linter_ok': 'right',
+      \ }
 
 " ------------------------------------------------------------------------------
 " Plugin options / vim-test
@@ -629,7 +599,3 @@ let g:closetag_close_shortcut = '<leader>>'
 
 " Disable closing tags for React fragments -> <></> for all supported file types
 "let g:closetag_enable_react_fragment = 0
-
-" ------------------------------------------------------------------------------
-" Plugin options / <Plugin>
-" ------------------------------------------------------------------------------
