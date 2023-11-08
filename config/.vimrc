@@ -593,9 +593,6 @@ let g:closetag_shortcut = '>'
 let g:closetag_close_shortcut = '<leader>>'
 
 " React fragments
-" integer value [0|1]
+" Options: integer value [0|1]
 " Enables closing tags for React fragments -> <></> for all supported file types
 "let g:closetag_enable_react_fragment = 1
-
-" Disable closing tags for React fragments -> <></> for all supported file types
-"let g:closetag_enable_react_fragment = 0
