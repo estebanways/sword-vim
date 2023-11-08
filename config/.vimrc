@@ -466,7 +466,7 @@ let g:indentLine_char = '|'
 " ------------------------------------------------------------------------------
 " Plugin options / nerdcommenter
 " ------------------------------------------------------------------------------
-" Leverage support for selections (keys: Leader + c + option)
+" Leverage support for selections (keys: leader, c + option)
 nnoremap <silent> <leader>c} V}:call NERDComment('x', 'toggle')<CR>
 nnoremap <silent> <leader>c{ V{:call NERDComment('x', 'toggle')<CR>
 
