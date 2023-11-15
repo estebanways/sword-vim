@@ -1,6 +1,6 @@
-# nvim-configs
+# sword-vim
 
-My custom Vim and .config settings
+A Vim/Neovim IDE
 
 <img alt="Neovim" src="./screenshots/neovim.png?raw=true" width="500" height="320" />
 
