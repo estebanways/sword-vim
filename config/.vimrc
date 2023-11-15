@@ -15,9 +15,10 @@ set clipboard+=unnamedplus  " This requires xclip (x11) or wl-clipboard (wayland
                             " to 'yy' for copying selection or line to the system's
                             " clipboard. Paste using 'p' or CTRL + SHIFT + v.
 syntax enable               " Colorizes text
+set termguicolors           " Enables true color support in the terminal
 set showcmd                 " Shows the executing commands (keyboard keys)
 set ruler                   " Shows the cursor position (y, x)
-set cursorline              " Underline the current line
+set cursorline              " Underlines the current line
 set encoding=utf-8          " Defines encoding
 set showmatch               " Highlights the matching parentheses
 set sw=2                    " Changes tabulation with TAB to 2 spaces
@@ -25,7 +26,7 @@ set relativenumber          " Displays the distance from the current line to eve
                             " other line.
 
 " Searching
-set hlsearch                " Highlight matches
+set hlsearch                " Highlights matches
 set incsearch               " Incremental searching
 set ignorecase              " Searches are case insensitive ...
 set smartcase               " ... unless they contain at least one capital letter
@@ -36,8 +37,8 @@ set noshowmode              " Removes the modes bar at the end of the editor
 " Sources of the current file (done already in ~/.config/nvim/init.vim)
 " ------------------------------------------------------------------------------
 "so ~/.vim/plugins.vim
-"so ~/.vim/plugin-config.vim
-"so ~/.vim/maps.vim
+"so ~/.vim/plugin-configs.vim
+"so ~/.vim/mappings.vim
 
 " ------------------------------------------------------------------------------
 " Lua
@@ -61,7 +62,7 @@ so ~/.vim/init.lua
 " Plugins START
 " ------------------------------------------------------------------------------
 " Looks for installed plugins in the plugins directory
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.vim/pack')
 
 " ------------------------------------------------------------------------------
 " Plugins / Auto-complete / repeat.vim
@@ -104,6 +105,11 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plugins / Auto-complete / Copilot.vim
 " ------------------------------------------------------------------------------
 Plug 'github/copilot.vim'  " GitHub's Copilot
+
+" ------------------------------------------------------------------------------
+" Plugins / Auto-complete / Codeium.vim
+" ------------------------------------------------------------------------------
+Plug 'Exafunction/codeium.vim', { 'branch': 'main' }
 
 " ------------------------------------------------------------------------------
 " Plugins / Typing / closetag
@@ -167,7 +173,7 @@ Plug 'yggdroot/indentline'  " Displays thin vertical lines at each indentation
 " ------------------------------------------------------------------------------
 " Plugins / IDE / nerdcommenter
 " ------------------------------------------------------------------------------
-Plug 'scrooloose/nerdcommenter'  " Comment functions so powerful—no comment
+Plug 'scrooloose/nerdcommenter'  " Comments functions so powerful—no comment
                                  " necessary.
 
 " ------------------------------------------------------------------------------
@@ -203,7 +209,7 @@ Plug 'styled-components/vim-styled-components'
 " ------------------------------------------------------------------------------
 Plug 'morhetz/gruvbox'                " Theme gruvbox
 Plug 'shinchu/lightline-gruvbox.vim'  " Theme lightline-gruvbox.vim
-Plug 'mhartington/oceanic-next'       " Themes
+" Plug 'mhartington/oceanic-next'       " Themes
 
 " ------------------------------------------------------------------------------
 " Plugins / Productivity / vim-wakatime
@@ -257,16 +263,16 @@ nmap <Leader>s <Plug>(easymotion-s2)
 " ------------------------------------------------------------------------------
 " Plugin options / Grubvox
 " ------------------------------------------------------------------------------
-"let g:gruvbox_contrast_dark = "hard"  "colorscheme gruvbox
+let g:gruvbox_contrast_dark = "hard"  "colorscheme gruvbox
 
 " ------------------------------------------------------------------------------
 " Plugin options / Oceanic-next
 " ------------------------------------------------------------------------------
 " If you have Neovim >= 0.1.5
-if (has("termguicolors"))
- set termguicolors
-endif
-colorscheme OceanicNext
+"if (has("termguicolors"))
+" set termguicolors
+"endif
+"colorscheme OceanicNext
 
 " ------------------------------------------------------------------------------
 " Plugin options / Nerdtree
@@ -325,7 +331,7 @@ nnoremap <leader>gs :Git<CR>  " git status
 " Makes vim consider all lines in the file for syntax highlighting if it
 " encounters a javascript/typescript file.
 "autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
-" Resets this value if it leaves the buffer again. (This will also reset
+" Reset this value if it leaves the buffer again. (This will also reset
 " previously set syntax-syncing settings, that you or other plugins might have set.)
 "autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 
@@ -339,35 +345,35 @@ nnoremap <leader>gs :Git<CR>  " git status
 "let g:polyglot_disabled = ['markdown']
 
 " Disable filetype detection
-" Disables Vim Polyglot filetype plugin won't disable native Vim filetype plugin
+" Disable Vim Polyglot filetype plugin won't disable native Vim filetype plugin
 "let g:polyglot_disabled = ['markdown.plugin']
 
-" Disables Autoindent
+" Disable Autoindent
 "let g:polyglot_disabled = ['autoindent']
 
 " Reindent
-" Disables reindenting of the current line in insert mode (see vim 'indentkeys'),
+" Disable reindenting of the current line in insert mode (see vim 'indentkeys'),
 " by turning it off.
 "autocmd BufEnter * set indentexpr=
 
-" Disables Default settings (Check out the list in the documentation)
+" Disable Default settings (Check out the list in the documentation)
 "let g:polyglot_disabled = ['sensible']
 
-" Disables No ftdetect if you want to use vim-polyglot plugins, but not ftdetect
+" Disable No ftdetect if you want to use vim-polyglot plugins, but not ftdetect
 " autocommands.
 "let g:polyglot_disabled = ['ftdetect']
 
 " ------------------------------------------------------------------------------
 " Plugin options / Vim-polyglot: vim-javacript
 " ------------------------------------------------------------------------------
-" Enables syntax highlighting for JSDocs
+" Enable syntax highlighting for JSDocs
 "let g:javascript_plugin_jsdoc = 1
 
-" Enables some additional syntax highlighting for NGDocs. Requires JSDoc plugin
+" Enable some additional syntax highlighting for NGDocs. Requires JSDoc plugin
 " to be enabled as well.
 "let g:javascript_plugin_ngdoc = 1
 
-" Enables syntax highlighting for Flow. Default value: 0
+" Enable syntax highlighting for Flow. Default value: 0
 "let g:javascript_plugin_flow = 1
 
 " Enable code folding for javascript based on our syntax file. Please note this
@@ -404,7 +410,7 @@ nnoremap <leader>gs :Git<CR>  " git status
 " ------------------------------------------------------------------------------
 " Plugin options / Vim-polyglot: python-syntax
 " ------------------------------------------------------------------------------
-" Enables all syntax highlighting features
+" Enable all syntax highlighting features
 let g:python_highlight_all = 1
 
 " Enable/Disable syntax highlighting features individually
@@ -494,7 +500,7 @@ let g:lightline = {
 
 " Lightline plugin ALE options
 
-" Overrides the previous declaration, resetting the custom bar configuration
+" Override the previous declaration, resetting the custom bar configuration
 "let g:lightline = {}
 
 " Register the components
@@ -578,7 +584,7 @@ let g:closetag_xhtml_filetypes = 'xhtml,jsx'
 let g:closetag_emptyTags_caseSensitive = 1
 
 " Dict
-" Disables auto-close if not in a "valid" region (based on filetype)
+" Disable auto-close if not in a "valid" region (based on filetype)
 let g:closetag_regions = {
     \ 'typescript.tsx': 'jsxRegion,tsxRegion',
     \ 'javascript.jsx': 'jsxRegion',
@@ -594,5 +600,43 @@ let g:closetag_close_shortcut = '<leader>>'
 
 " React fragments
 " Options: integer value [0|1]
-" Enables closing tags for React fragments -> <></> for all supported file types
+" Enable closing tags for React fragments -> <></> for all supported file types
 "let g:closetag_enable_react_fragment = 1
+
+" ------------------------------------------------------------------------------
+" Plugin options / codeium.vim
+" ------------------------------------------------------------------------------
+" Disable Codeium by default
+"let g:codeium_enabled = v:false
+
+"Disable the automatic triggering of completions
+"let g:codeium_manual = v:true
+
+" Disable Codeium for particular filetypes
+let g:codeium_filetypes = {
+    \ "bash": v:false,
+    \ "typescript": v:true,
+    \ }
+
+" Key bindings
+
+"let g:codeium_disable_bindings = 1  " Disables Codeium's default keybindings
+"vim.g.codeium_disable_bindings = 1  " or in Neovim
+"g:codeium_no_map_tab                " Just disables the <Tab> binding (Accept suggestion)
+
+" Bind the actions to non-default keys
+"inoremap <script> <C-g> <Cmd>call codeium#Accept()<CR>       " Accept/Insert suggestion
+inoremap <C-;> <Cmd>call codeium#CycleCompletions(1)<CR>     " Next suggestion
+inoremap <C-,> <Cmd>call codeium#CycleCompletions(-1)<CR>    " Previous suggestion
+inoremap <C-x> <Cmd>call codeium#Clear()<CR>                 " Clears current suggestion
+
+" ------------------------------------------------------------------------------
+" Plugin options / vim-easy-align
+" ------------------------------------------------------------------------------
+" Vimscript plugin installed with packer.nvim
+
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)

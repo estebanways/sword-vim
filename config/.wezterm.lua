@@ -29,11 +29,11 @@ return {
     -- Darken the background image by reducing it to 1/3rd
     brightness = 0.3,
 
-    -- You can adjust the hue by scaling its value.
-    -- a multiplier of 1.0 leaves the value unchanged.
+    -- You can adjust the hue by scaling its value. A multiplier of 1.0 leaves
+    -- the value unchanged.
     hue = 1.0,
 
-    -- You can adjust the saturation also.
+    -- You can also adjust the saturation.
     saturation = 1.0,
   },
   --window_background_opacity = 0.7
