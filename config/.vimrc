@@ -15,10 +15,10 @@ set clipboard+=unnamedplus  " This requires xclip (x11) or wl-clipboard (wayland
                             " to 'yy' for copying selection or line to the system's
                             " clipboard. Paste using 'p' or CTRL + SHIFT + v.
 syntax enable               " Colorizes text
-set termguicolors           " Enables true color support in the terminal
 set showcmd                 " Shows the executing commands (keyboard keys)
 set ruler                   " Shows the cursor position (y, x)
 set cursorline              " Underlines the current line
+set termguicolors           " Enables true color support in the terminal
 set encoding=utf-8          " Defines encoding
 set showmatch               " Highlights the matching parentheses
 set sw=2                    " Changes tabulation with TAB to 2 spaces
