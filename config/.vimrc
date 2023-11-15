@@ -209,8 +209,8 @@ Plug 'styled-components/vim-styled-components'
 " ------------------------------------------------------------------------------
 Plug 'morhetz/gruvbox'                " Theme gruvbox
 Plug 'shinchu/lightline-gruvbox.vim'  " Theme lightline-gruvbox.vim
-Plug 'mhartington/oceanic-next'       " Themes
-Plug 'Mofiqul/dracula.nvim'           "Theme Dracula
+Plug 'mhartington/oceanic-next'       " Theme OceanicNext
+Plug 'Mofiqul/dracula.nvim'           " Theme Dracula
 
 " ------------------------------------------------------------------------------
 " Plugins / Productivity / vim-wakatime
