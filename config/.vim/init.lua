@@ -49,7 +49,7 @@ packer.startup(function()
 end)
 
 -- Run :PackerInstall to complete the installations, but do not remove the
--- existent plugins: packer.nvim and lazy.nvim installed manually
+-- existent plugins installed manually, such as packer.nvim and/or lazy.nvim.
 
 --------------------------------------------------------------------------------
 -- Lazy.nvim plugins
