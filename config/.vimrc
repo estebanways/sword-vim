@@ -209,7 +209,8 @@ Plug 'styled-components/vim-styled-components'
 " ------------------------------------------------------------------------------
 Plug 'morhetz/gruvbox'                " Theme gruvbox
 Plug 'shinchu/lightline-gruvbox.vim'  " Theme lightline-gruvbox.vim
-" Plug 'mhartington/oceanic-next'       " Themes
+Plug 'mhartington/oceanic-next'       " Themes
+Plug 'Mofiqul/dracula.nvim'           "Theme Dracula
 
 " ------------------------------------------------------------------------------
 " Plugins / Productivity / vim-wakatime
@@ -263,7 +264,8 @@ nmap <Leader>s <Plug>(easymotion-s2)
 " ------------------------------------------------------------------------------
 " Plugin options / Grubvox
 " ------------------------------------------------------------------------------
-let g:gruvbox_contrast_dark = "hard"  "colorscheme gruvbox
+let g:gruvbox_contrast_dark = "hard"
+colorscheme gruvbox
 
 " ------------------------------------------------------------------------------
 " Plugin options / Oceanic-next
@@ -273,6 +275,13 @@ let g:gruvbox_contrast_dark = "hard"  "colorscheme gruvbox
 " set termguicolors
 "endif
 "colorscheme OceanicNext
+
+" ------------------------------------------------------------------------------
+" Plugin options / Dracula
+" ------------------------------------------------------------------------------
+" Vim-Script
+"colorscheme dracula
+"colorscheme dracula-soft
 
 " ------------------------------------------------------------------------------
 " Plugin options / Nerdtree
