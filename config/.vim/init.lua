@@ -59,8 +59,8 @@ end)
 --------------------------------------------------------------------------------
 -- Plugin options / nvim-tree.lua
 --------------------------------------------------------------------------------
--- This example plugin generates an error messages when nvim starts, but makes
--- sure that the Lua pluings work.
+-- This example plugin generates an error message when nvim starts, but ensures
+-- the Lua plugins work.
 -- Error detected while processing /home/esteban/config/.vim/init.lua:
 -- W18: Invalid character in group name
 
