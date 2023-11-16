@@ -1,7 +1,7 @@
 " File: .vimrc
 " Author: Esteban Herrera Castro, stv.herrera@gmail.com
 " Date: 31.10.2023
-" Last Modified Date: 01.11.2023
+" Last Modified Date: 11.15.2023
 " Last Modified By: Esteban Herrera Castro, stv.herrera@gmail.com
 
 " ------------------------------------------------------------------------------
@@ -59,7 +59,7 @@ set noshowmode              " Removes the modes bar at the end of the editor
 so ~/.vim/init.lua
 
 " ------------------------------------------------------------------------------
-" Plugins START
+" Vimscript Plugins START
 " ------------------------------------------------------------------------------
 " Looks for installed plugins in the plugins directory
 call plug#begin('~/.vim/pack')
@@ -123,6 +123,11 @@ Plug 'tpope/vim-surround'  " It's all about "surroundings": parentheses, bracket
                            " quotes, XML tags, and more.
 
 " ------------------------------------------------------------------------------
+" Plugins / Formatting / vim-easy-align
+" ------------------------------------------------------------------------------
+" Installed with packer.nvim
+
+" ------------------------------------------------------------------------------
 " Plugins / Color/ vim-css-color
 " ------------------------------------------------------------------------------
 Plug 'ap/vim-css-color'  " Color
@@ -133,7 +138,18 @@ Plug 'ap/vim-css-color'  " Color
 Plug 'tpope/vim-fugitive'  " Git version control system
 
 " ------------------------------------------------------------------------------
-" Plugins / IDE / vim-easymotion 
+" Plugins / Git / vim-gitbranch
+" ------------------------------------------------------------------------------
+Plug 'itchyny/vim-gitbranch'  " Provides a function which returns the name of the
+                              " git branch.
+
+" ------------------------------------------------------------------------------
+" Plugins / IDE / vim-startify
+" ------------------------------------------------------------------------------
+Plug 'mhinz/vim-startify'
+
+" ------------------------------------------------------------------------------
+" Plugins / IDE / vim-easymotion
 " ------------------------------------------------------------------------------
 Plug 'easymotion/vim-easymotion'
 
@@ -235,7 +251,7 @@ Plug 'tyewang/vimux-jest-test'  " vimux-jest-test
 Plug 'janko-m/vim-test' " vim-test
 
 " ------------------------------------------------------------------------------
-" Plugins END
+" Vimscript Plugins END
 " ------------------------------------------------------------------------------
 call plug#end()
 
@@ -327,6 +343,54 @@ autocmd FileType scss setl iskeyword+=@-@  " For scss files, you may need use th
 " ------------------------------------------------------------------------------
 set diffopt+=vertical  " Fugitive always vertical diffing
 nnoremap <leader>gs :Git<CR>  " git status
+
+" ------------------------------------------------------------------------------
+" Plugin options / vim-startify
+" ------------------------------------------------------------------------------
+" Show modified and untracked git files
+
+" Returns all modified files of the current git repo
+" `2>/dev/null` makes the command fail quietly, so that when we are not in a git
+" repo, the list will be empty
+function! s:gitModified()
+    let files = systemlist('git ls-files -m 2>/dev/null')
+    return map(files, "{'line': v:val, 'path': v:val}")
+endfunction
+
+" Same as above, but show untracked files, honouring .gitignore
+function! s:gitUntracked()
+    let files = systemlist('git ls-files -o --exclude-standard 2>/dev/null')
+    return map(files, "{'line': v:val, 'path': v:val}")
+endfunction
+
+let g:startify_lists = [
+        \ { 'type': 'files',     'header': ['   MRU']            },
+        \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
+        \ { 'type': 'sessions',  'header': ['   Sessions']       },
+        \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
+        \ { 'type': function('s:gitModified'),  'header': ['   git modified']},
+        \ { 'type': function('s:gitUntracked'), 'header': ['   git untracked']},
+        \ { 'type': 'commands',  'header': ['   Commands']       },
+        \ ]
+
+" Use NERDTree bookmarks
+let g:startify_bookmarks = systemlist("cut -sd' ' -f 2- ~/.NERDTreeBookmarks")
+
+"Auto-load and auto-save a session named from Git branch
+function! GetUniqueSessionName()
+  let path = fnamemodify(getcwd(), ':~:t')
+  let path = empty(path) ? 'no-project' : path
+  let branch = gitbranch#name()
+  let branch = empty(branch) ? '' : '-' . branch
+  return substitute(path . branch, '/', '-', 'g')
+endfunction
+
+autocmd User        StartifyReady silent execute 'SLoad '  . GetUniqueSessionName()
+autocmd VimLeavePre *             silent execute 'SSave! ' . GetUniqueSessionName()
+
+" Create a custom header using figlet
+let g:startify_custom_header =
+       \ startify#pad(split(system('figlet -w 100 SWORDVIM'), '\n'))
 
 " ------------------------------------------------------------------------------
 " Plugin options / fzf
@@ -642,8 +706,6 @@ inoremap <C-x> <Cmd>call codeium#Clear()<CR>                 " Clears current su
 " ------------------------------------------------------------------------------
 " Plugin options / vim-easy-align
 " ------------------------------------------------------------------------------
-" Vimscript plugin installed with packer.nvim
-
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
 
