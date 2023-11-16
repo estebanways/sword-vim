@@ -1,7 +1,7 @@
 --
 --------------------------------------------------------------------------------
 --         FILE:  init.lua
---        USAGE:  --- 
+--        USAGE:  ---
 --  DESCRIPTION:  Lua init file
 --      OPTIONS:  ---
 -- REQUIREMENTS:  Neovim 0.8.0
