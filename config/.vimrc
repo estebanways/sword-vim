@@ -390,7 +390,7 @@ autocmd VimLeavePre *             silent execute 'SSave! ' . GetUniqueSessionNam
 
 " Create a custom header using figlet
 let g:startify_custom_header =
-       \ startify#pad(split(system('figlet -w 100 SWORDVIM'), '\n'))
+       \ startify#pad(split(system('figlet -w 100 SWORD VIM'), '\n'))
 
 " ------------------------------------------------------------------------------
 " Plugin options / fzf
