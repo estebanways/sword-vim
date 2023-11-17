@@ -52,8 +52,8 @@ set noshowmode              " Removes the modes bar at the end of the editor
 " Single line use from Neovim
 "lua print('this also works')
 
-" Source a minimal Lua file from Neovim
-"so ~/.vim/basic.lua
+" Source a minimal/test Lua file from Neovim
+"so ~/.vim/test.lua
 
 " Source an init Lua file from Neovim
 so ~/.vim/init.lua
@@ -99,7 +99,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " coc-json - json
 " coc-tsserver - TypeScript
 " coc-css - CSS
-" ADD-HERE
+" coc-sh
+" ADD HERE
 
 " ------------------------------------------------------------------------------
 " Plugins / Auto-complete / Copilot.vim
@@ -126,6 +127,12 @@ Plug 'tpope/vim-surround'  " It's all about "surroundings": parentheses, bracket
 " Plugins / Formatting / vim-easy-align
 " ------------------------------------------------------------------------------
 " Installed with packer.nvim
+
+" ------------------------------------------------------------------------------
+" Plugins / Formatting / vim-visual-multi
+" ------------------------------------------------------------------------------
+Plug 'mg979/vim-visual-multi'  " Improves actions like: select a word, create 
+                               " multiple cursors, and create cursors vertically.
 
 " ------------------------------------------------------------------------------
 " Plugins / Color/ vim-css-color
@@ -221,6 +228,17 @@ Plug 'vim-python/python-syntax' " Vim- polyglot: python-syntax
 Plug 'styled-components/vim-styled-components'
 
 " ------------------------------------------------------------------------------
+" Plugins / Syntax / vim-bash
+" ------------------------------------------------------------------------------
+Plug 'kovetskiy/vim-bash'  " Fixing syntax issues with bash files
+
+" ------------------------------------------------------------------------------
+" Plugins / Syntax / bats.vim
+" ------------------------------------------------------------------------------
+Plug 'rosstimson/bats.vim'  " Extends the built in shell highlighting (sh.vim)
+                            " for Bats.
+
+" ------------------------------------------------------------------------------
 " Plugins / Themes
 " ------------------------------------------------------------------------------
 Plug 'morhetz/gruvbox'                " Theme gruvbox
@@ -239,6 +257,11 @@ Plug 'wakatime/vim-wakatime'
 " Plugins / Terminal multiplexer / Vimux
 " ------------------------------------------------------------------------------
 Plug 'benmills/vimux'  " Tmux
+
+" ------------------------------------------------------------------------------
+" Plugins / Linters / vim-shellcheck
+" ------------------------------------------------------------------------------
+Plug 'itspriddle/vim-shellcheck'  " Finds errors in bash/sh scripts
 
 " ------------------------------------------------------------------------------
 " Plugins / Testing / Jest
@@ -313,7 +336,8 @@ let g:NERDTreeQuitOnOpen=1
 "set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
 nnoremap <silent> <F2> :NERDTreeFind<CR>
 noremap <F3> :NERDTreeToggle<CR>
-map <C-n> :NERDTreeToggle<CR>  " set shortcut for open Nerdtree
+map <C-n> :NERDTreeToggle<CR>  " Set shortcut for open Nerdtree.
+                               " Overridden by vim-visual-multi to select a word.
 let NERDTreeShowHidden=1  " Make Nerdtree show .files by default
 
 " ------------------------------------------------------------------------------
