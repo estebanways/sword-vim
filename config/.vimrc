@@ -200,6 +200,11 @@ Plug 'scrooloose/nerdcommenter'  " Comments functions so powerful—no comment
                                  " necessary.
 
 " ------------------------------------------------------------------------------
+" Plugins / IDE / commentary.vim
+" ------------------------------------------------------------------------------
+Plug 'tpope/vim-commentary'  " Comment stuff out
+
+" ------------------------------------------------------------------------------
 " Plugins / IDE / lightline.vim
 " ------------------------------------------------------------------------------
 Plug 'itchyny/lightline.vim'   " Status bar
@@ -336,8 +341,8 @@ let g:NERDTreeQuitOnOpen=1
 "set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
 nnoremap <silent> <F2> :NERDTreeFind<CR>
 noremap <F3> :NERDTreeToggle<CR>
-map <C-n> :NERDTreeToggle<CR>  " Set shortcut for open Nerdtree.
-                               " Overridden by vim-visual-multi to select a word.
+map <C-n> :NERDTreeToggle<CR>  " Set shortcut for open Nerdtree. Overridden by
+                               " vim-visual-multi to select a word.
 let NERDTreeShowHidden=1  " Make Nerdtree show .files by default
 
 " ------------------------------------------------------------------------------
@@ -572,6 +577,14 @@ let g:indentLine_char = '|'
 " Leverage support for selections (keys: leader, c + option)
 nnoremap <silent> <leader>c} V}:call NERDComment('x', 'toggle')<CR>
 nnoremap <silent> <leader>c{ V{:call NERDComment('x', 'toggle')<CR>
+
+" ------------------------------------------------------------------------------
+" Plugin options / commentary.vim
+" ------------------------------------------------------------------------------
+" Add unsupported file types
+
+" Add comment out support for Apache configuration files
+autocmd FileType apache setlocal commentstring=#\ %s
 
 " ------------------------------------------------------------------------------
 " Plugin options / lightline.vim
