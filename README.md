@@ -1,6 +1,6 @@
 # sword-vim
 
-A Vim/Neovim IDE
+A Vim/Neovim Text Editor and IDE
 
 ## Screenshots
 
