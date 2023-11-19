@@ -31,26 +31,19 @@ require('plugin-options')
 local packer = require('packer')
 packer.startup(function()
     ----------------------------------------------------------------------------
-    -- Vimscript Plugins / vim easy-align
+    -- Lua Plugins / Dashboard / alpha-nvim
     ----------------------------------------------------------------------------
-    use 'junegunn/vim-easy-align'
-
-    ----------------------------------------------------------------------------
-    -- Lua Plugins / lazy
-    ----------------------------------------------------------------------------
-    --use 'folke/lazy.nvim'
-
-    ----------------------------------------------------------------------------
-    -- Lua Plugins / alpha
-    ----------------------------------------------------------------------------
+    -- A lua powered greeter like vim-startify / dashboard-nvim
     use {
         'goolord/alpha-nvim',
-        requires = 'nvim-tree/nvim-web-devicons',
+        --requires = 'nvim-tree/nvim-web-devicons', -- Replaced by other icons
     }
 
     ----------------------------------------------------------------------------
-    -- Lua Plugins / which-key
+    -- Lua Plugins / Help / which-key.nvim
     ----------------------------------------------------------------------------
+    -- It displays a popup with possible keybindings of the command you started
+    -- typing.
     use {
         "folke/which-key.nvim",
         config = function()
@@ -64,6 +57,16 @@ packer.startup(function()
         end
     }
 
+    ----------------------------------------------------------------------------
+    -- Lua Plugins / Plugin Manager / lazy.nvim
+    ----------------------------------------------------------------------------
+    --use 'folke/lazy.nvim' -- A modern plugin manager for Neovim
+
+    ----------------------------------------------------------------------------
+    -- Vimscript Plugins / Formatting / vim easy-align
+    ----------------------------------------------------------------------------
+    use 'junegunn/vim-easy-align' -- Easy-to-use Vim alignment
+
     -- Add other plugins here
 end)
 
@@ -76,18 +79,13 @@ end)
 --TODO:
 
 --------------------------------------------------------------------------------
--- Lua Plugin options / lazy
---------------------------------------------------------------------------------
---TODO:
-
---------------------------------------------------------------------------------
--- Lua Plugin options / alpha
+-- Lua Plugin options / alpha-nvim
 --------------------------------------------------------------------------------
 -- This example plugin generates an error message when nvim starts, but it works
 --require("alpha").setup(require("alpha.themes.startify").config)
 
 --------------------------------------------------------------------------------
--- Lua Plugin options / which-key
+-- Lua Plugin options / which-key.nvim
 --------------------------------------------------------------------------------
 require("which-key").setup({
   plugins = {
@@ -177,3 +175,8 @@ require("which-key").setup({
     filetypes = {},
   },
 })
+
+--------------------------------------------------------------------------------
+-- Lua Plugin options / lazy.nvim
+--------------------------------------------------------------------------------
+--TODO:
