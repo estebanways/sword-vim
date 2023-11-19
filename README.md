@@ -12,7 +12,7 @@ A Vim/Neovim IDE
 
 <img alt="debugging" src="./screenshots/debugging.png?raw=true" width="500" height="320" />
 
-### Transparency
+### Background Image and Transparency
 
 <img alt="transparency" src="./screenshots/neovim.png?raw=true" width="500" height="320" />
 
