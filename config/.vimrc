@@ -33,6 +33,14 @@ set smartcase               " ... unless they contain at least one capital lette
 set laststatus=2            " Controls when/how to display the status-bar
 set noshowmode              " Removes the modes bar at the end of the editor
 
+" Spelling
+set spelllang=en_us         " Sets the spelling language for English (United States)
+"set spelllang=en_gb         " Sets the spelling language for English (United Kingdom)
+"set spelllang=ru            " Sets the spelling language for Russian
+"set spelllang=de            " Sets the spelling language for German
+"set spelllang=es            " Sets the spelling language for Spanish
+set spell                   " Activates spelling
+
 " ------------------------------------------------------------------------------
 " Sources of the current file (done already in ~/.config/nvim/init.vim)
 " ------------------------------------------------------------------------------
