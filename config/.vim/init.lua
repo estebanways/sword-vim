@@ -36,7 +36,7 @@ packer.startup(function()
     -- A lua powered greeter like vim-startify / dashboard-nvim
     use {
         'goolord/alpha-nvim',
-        --requires = 'nvim-tree/nvim-web-devicons', -- Replaced by other icons
+        --requires = 'nvim-tree/nvim-web-devicons',  -- Replaced by other icons
     }
 
     ----------------------------------------------------------------------------
@@ -63,9 +63,16 @@ packer.startup(function()
     --use 'folke/lazy.nvim' -- A modern plugin manager for Neovim
 
     ----------------------------------------------------------------------------
+    -- Lua or Vimscript Plugins / Themes / Abstract-cs
+    ----------------------------------------------------------------------------
+    use 'Abstract-IDE/Abstract-cs'  -- colorscheme for (neo)vim written in lua,
+                                    -- specially made for Abstract Colorscheme
+                                    -- with Tree-sitter support.
+
+    ----------------------------------------------------------------------------
     -- Vimscript Plugins / Formatting / vim easy-align
     ----------------------------------------------------------------------------
-    use 'junegunn/vim-easy-align' -- Easy-to-use Vim alignment
+    use 'junegunn/vim-easy-align'  -- Easy-to-use Vim alignment
 
     -- Add other plugins here
 end)
@@ -180,6 +187,12 @@ require("which-key").setup({
 -- Lua Plugin options / lazy.nvim
 --------------------------------------------------------------------------------
 --TODO:
+
+--------------------------------------------------------------------------------
+-- Lua or Vimscript Plugin options / Themes / Abstract-cs
+--------------------------------------------------------------------------------
+-- Lua
+--vim.cmd[[colorscheme abscs]]
 
 --------------------------------------------------------------------------------
 -- Lua Plugin options / <Plugin>
