@@ -63,7 +63,7 @@ packer.startup(function()
     --use 'folke/lazy.nvim' -- A modern plugin manager for Neovim
 
     ----------------------------------------------------------------------------
-    -- Lua or Vimscript Plugins / Themes / Abstract-cs
+    -- Lua Plugins / Themes / Abstract-cs
     ----------------------------------------------------------------------------
     use 'Abstract-IDE/Abstract-cs'  -- colorscheme for (neo)vim written in lua,
                                     -- specially made for Abstract Colorscheme
@@ -189,9 +189,9 @@ require("which-key").setup({
 --TODO:
 
 --------------------------------------------------------------------------------
--- Lua or Vimscript Plugin options / Themes / Abstract-cs
+-- Lua Plugin options / Themes / Abstract-cs
 --------------------------------------------------------------------------------
--- Lua
+-- Colorscheme
 --vim.cmd[[colorscheme abscs]]
 
 --------------------------------------------------------------------------------
