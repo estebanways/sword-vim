@@ -323,6 +323,12 @@ nmap <Leader>q :q<CR>
 " Run current file with node.js
 nnoremap <Leader>x :!node %<cr>
 
+" Run current file
+" Use Vimux shortcuts or split-window with tmux
+
+" Run visual selection
+" Use :'<,'>write ! language_runtime_command
+
 " ------------------------------------------------------------------------------
 " Plugin options / Easymotion
 " ------------------------------------------------------------------------------
@@ -961,6 +967,9 @@ let g:VimuxOrientation = "v"
 
 " Run the current file with rspec
 map <Leader>rb :call VimuxRunCommand("clear; rspec " . bufname("%"))<CR>
+
+" Run the current file with Python (current Python environment)
+map <Leader>py :call VimuxRunCommand("clear; python " . bufname("%"))<CR>
 
 " Prompt for a command to run, i.e.: node index.js
 map <Leader>vp :VimuxPromptCommand<CR>
