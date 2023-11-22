@@ -24,6 +24,8 @@ set showmatch               " Highlights the matching parentheses
 set sw=2                    " Changes tabulation with TAB to 2 spaces
 set relativenumber          " Displays the distance from the current line to every
                             " other line.
+set scrolloff=5             " Determines the number of context lines above and
+                            " below the cursor.
 
 " Searching
 set hlsearch                " Highlights matches
@@ -150,9 +152,18 @@ Plug 'mg979/vim-visual-multi'  " Improves actions like: select a word, create
                                " multiple cursors, and create cursors vertically.
 
 " ------------------------------------------------------------------------------
-" Plugins / Color/ vim-css-color
+" Plugins / Color / vim-css-color
 " ------------------------------------------------------------------------------
 Plug 'ap/vim-css-color'  " Color
+
+" ------------------------------------------------------------------------------
+" Plugins / Formatting / vim-prettier
+" ------------------------------------------------------------------------------
+" Post install (yarn install | npm install) then load plugin only for editing
+" supported files.
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install --frozen-lockfile --production',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
 
 " ------------------------------------------------------------------------------
 " Plugins / Git / vim-fugitive
@@ -275,6 +286,11 @@ Plug 'mhartington/oceanic-next'       " Theme OceanicNext
 Plug 'Mofiqul/dracula.nvim'           " Theme Dracula
 
 " ------------------------------------------------------------------------------
+" Plugins / Transparency / vim-transparent
+" ------------------------------------------------------------------------------
+Plug 'tribela/vim-transparent'  " Transparency
+
+" ------------------------------------------------------------------------------
 " Plugins / Productivity / vim-wakatime
 " ------------------------------------------------------------------------------
 " The open source plugin for productivity metrics, goals, leaderboards, and
@@ -355,6 +371,35 @@ colorscheme gruvbox
 " Vim-Script
 "colorscheme dracula
 "colorscheme dracula-soft
+
+" ------------------------------------------------------------------------------
+" Plugin options / vim-transparent
+" ------------------------------------------------------------------------------
+" default
+let g:transparent_groups = ['Normal', 'Comment', 'Constant', 'Special', 'Identifier',
+                            \ 'Statement', 'PreProc', 'Type', 'Underlined', 'Todo', 'String',
+                            \ 'Function', 'Conditional', 'Repeat', 'Operator', 'Structure',
+                            \ 'LineNr', 'NonText', 'SignColumn', 'CursorLineNr', 'EndOfBuffer']
+
+" Pmenu
+let g:transparent_groups += ['Pmenu']
+
+" coc.nvim
+let g:transparent_groups += ['NormalFloat', 'CocFloating']
+
+augroup transparent
+    autocmd VimEnter,ColorScheme * call MyTransparent()
+augroup END
+
+function! MyTransparent()
+    " Customize the highlight groups for transparency in here.
+
+    " CursorLine
+    "hi CursorLine ctermfg=NONE ctermbg=239 guibg=NONE guibg=#4e4e4e
+
+    " coc.nvim
+    "hi CocMenuSel ctermbg=239 guibg=#4e4e4e
+endfunction
 
 " ------------------------------------------------------------------------------
 " Plugin options / Nerdtree
@@ -1071,3 +1116,13 @@ xmap ga <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+" ------------------------------------------------------------------------------
+" Plugins options / vim-prettier
+" ------------------------------------------------------------------------------
+" Change the mapping to run from the default of <Leader>pr
+nmap <Leader>pr <Plug>(Prettier)
+
+" Auto formatting files on save without @format or @prettier tags
+"let g:prettier#autoformat = 1
+"let g:prettier#autoformat_require_pragma = 0

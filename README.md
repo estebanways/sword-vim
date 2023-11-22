@@ -12,7 +12,11 @@ A Vim/Neovim Text Editor and IDE
 
 <img alt="debugging" src="./screenshots/debugging.png?raw=true" width="500" height="320" />
 
-### Background Image and Transparency
+### Code Analysis
 
-<img alt="transparency" src="./screenshots/neovim.png?raw=true" width="500" height="320" />
+<img alt="analysis" src="./screenshots/analysis.png?raw=true" width="500" height="320" />
+
+### Themes
+
+<img alt="themes" src="./screenshots/themes.png?raw=true" width="500" height="320" />
 
