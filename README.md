@@ -16,6 +16,10 @@ A Vim/Neovim Text Editor and IDE
 
 <img alt="analysis" src="./screenshots/analysis.png?raw=true" width="500" height="320" />
 
+### Multiple Tabs
+
+<img alt="buffers" src="./screenshots/buffers.png?raw=true" width="500" height="320" />
+
 ### Themes
 
 <img alt="themes" src="./screenshots/themes.png?raw=true" width="500" height="320" />
