@@ -31,6 +31,15 @@ require('plugin-options')
 local packer = require('packer')
 packer.startup(function()
     ----------------------------------------------------------------------------
+    -- Lua Plugins / Buffer line / bufferline.nvim
+    ----------------------------------------------------------------------------
+    -- A snazzy buffer line (with tabpage integration) for Neovim
+    use {'akinsho/bufferline.nvim',
+         tag = "*",
+         --requires = 'nvim-tree/nvim-web-devicons'
+    }
+
+    ----------------------------------------------------------------------------
     -- Lua Plugins / Dashboard / alpha-nvim
     ----------------------------------------------------------------------------
     -- A lua powered greeter like vim-startify / dashboard-nvim
@@ -66,6 +75,7 @@ packer.startup(function()
     ----------------------------------------------------------------------------
     -- Lua Plugins / Snippets / LuaSnip
     ----------------------------------------------------------------------------
+    -- LuaSnip is a powerful and fast snippet engine for Neovim
     use({
         "L3MON4D3/LuaSnip",
         -- follow latest release.
@@ -104,6 +114,46 @@ end)
 --TODO:
 
 --------------------------------------------------------------------------------
+-- Lua Plugin options /  bufferline.nvim
+--------------------------------------------------------------------------------
+vim.opt.termguicolors = true  -- Required for this plugin to work
+
+-- Enable bufferline.nvim
+vim.cmd [[set hidden]]
+require('bufferline').setup{
+    options = {
+        icons = 'both',
+        icon_custom_colors = false,
+        icon_padding = 1,
+        icon_close_tab = '',
+        icon_close_tab_modified = '●',
+        close_icon_position = 'right',
+        max_name_length = 18,
+        max_prefix_length = 15,
+        tabpages = true,
+        show_tab_indicators = true,
+        separator_style = 'thick',
+        enforce_regular_tabs = false,
+        always_show_bufferline = true,
+        sort_by = 'extension',
+    }
+}
+
+-- Offset bufferline when NERDTree is open or closed
+local api = vim.api
+
+local function toggle_offset()
+    local nerdtree_open = vim.fn.exists("*NERDTreeIsOpen") and vim.fn["NERDTreeIsOpen"]()
+    if nerdtree_open == 1 then
+        vim.cmd("BufferLineMoveNext")
+    else
+        vim.cmd("BufferLineMovePrev")
+    end
+end
+
+vim.cmd("autocmd! User NERDTreeToggle :lua require'bufferline_config'.toggle_offset()")
+
+--------------------------------------------------------------------------------
 -- Lua Plugin options / alpha-nvim
 --------------------------------------------------------------------------------
 -- This example plugin generates an error message when nvim starts, but it works
@@ -114,22 +164,22 @@ end)
 --------------------------------------------------------------------------------
 require("which-key").setup({
   plugins = {
-    marks = true, -- shows a list of your marks on ' and `
-    registers = true, -- shows your registers on " in NORMAL or <C-r> in INSERT mode
-    -- the presets plugin, adds help for a bunch of default keybindings in Neovim
-    -- No actual key bindings are created
+    marks = true,             -- shows a list of your marks on ' and `
+    registers = true,         -- shows your registers on " in NORMAL or <C-r> in INSERT mode
+                              -- the presets plugin, adds help for a bunch of default keybindings in Neovim
+                              -- No actual key bindings are created
     spelling = {
-      enabled = true, -- enabling this will show WhichKey when pressing z= to select spelling suggestions
-      suggestions = 20, -- how many suggestions should be shown in the list?
+      enabled = true,         -- enabling this will show WhichKey when pressing z= to select spelling suggestions
+      suggestions = 20,       -- how many suggestions should be shown in the list?
     },
     presets = {
-      operators = true, -- adds help for operators like d, y, ...
-      motions = true, -- adds help for motions
-      text_objects = true, -- help for text objects triggered after entering an operator
-      windows = true, -- default bindings on <c-w>
-      nav = true, -- misc bindings to work with windows
-      z = true, -- bindings for folds, spelling and others prefixed with z
-      g = true, -- bindings for prefixed with g
+      operators = true,       -- adds help for operators like d, y, ...
+      motions = true,         -- adds help for motions
+      text_objects = true,    -- help for text objects triggered after entering an operator
+      windows = true,         -- default bindings on <c-w>
+      nav = true,             -- misc bindings to work with windows
+      z = true,               -- bindings for folds, spelling and others prefixed with z
+      g = true,               -- bindings for prefixed with g
     },
   },
   -- add operators that will trigger motion and text object completion
@@ -146,34 +196,34 @@ require("which-key").setup({
     count = true,
   },
   icons = {
-    breadcrumb = "»", -- symbol used in the command line area that shows your active key combo
-    separator = "➜", -- symbol used between a key and its label
-    group = "+", -- symbol prepended to a group
+    breadcrumb = "»",         -- symbol used in the command line area that shows your active key combo
+    separator = "➜",          -- symbol used between a key and its label
+    group = "+",              -- symbol prepended to a group
   },
   popup_mappings = {
-    scroll_down = "<c-d>", -- binding to scroll down inside the popup
-    scroll_up = "<c-u>", -- binding to scroll up inside the popup
+    scroll_down = "<c-d>",    -- binding to scroll down inside the popup
+    scroll_up = "<c-u>",      -- binding to scroll up inside the popup
   },
   window = {
-    border = "none", -- none, single, double, shadow
-    position = "bottom", -- bottom, top
-    margin = { 1, 0, 1, 0 }, -- extra window margin [top, right, bottom, left]. When between 0 and 1, will be treated as a percentage of the screen size.
-    padding = { 1, 2, 1, 2 }, -- extra window padding [top, right, bottom, left]
-    winblend = 0, -- value between 0-100 0 for fully opaque and 100 for fully transparent
-    zindex = 1000, -- positive value to position WhichKey above other floating windows.
+    border = "none",           -- none, single, double, shadow
+    position = "bottom",       -- bottom, top
+    margin = { 1, 0, 1, 0 },   -- extra window margin [top, right, bottom, left]. When between 0 and 1, will be treated as a percentage of the screen size.
+    padding = { 1, 2, 1, 2 },  -- extra window padding [top, right, bottom, left]
+    winblend = 0,   -- value between 0-100 0 for fully opaque and 100 for fully transparent
+    zindex = 1000,  -- positive value to position WhichKey above other floating windows.
   },
   layout = {
-    height = { min = 4, max = 25 }, -- min and max height of the columns
-    width = { min = 20, max = 50 }, -- min and max width of the columns
-    spacing = 3, -- spacing between columns
-    align = "left", -- align columns left, center or right
+    height = { min = 4, max = 25 },  -- min and max height of the columns
+    width = { min = 20, max = 50 },  -- min and max width of the columns
+    spacing = 3,                     -- spacing between columns
+    align = "left",                  -- align columns left, center or right
   },
-  ignore_missing = false, -- enable this to hide mappings for which you didn't specify a label
+  ignore_missing = false,  -- enable this to hide mappings for which you didn't specify a label
   hidden = { "<silent>", "<cmd>", "<Cmd>", "<CR>", "^:", "^ ", "^call ", "^lua " }, -- hide mapping boilerplate
-  show_help = true, -- show a help message in the command line for using WhichKey
-  show_keys = true, -- show the currently pressed key and its label as a message in the command line
-  triggers = "auto", -- automatically set up triggers
-  -- triggers = {"<leader>"} -- or specify a list manually
+  show_help = true,        -- show a help message in the command line for using WhichKey
+  show_keys = true,        -- show the currently pressed key and its label as a message in the command line
+  triggers = "auto",       -- automatically set up triggers
+  --triggers = {"<leader>"}  -- or specify a list manually
   -- list of triggers, where WhichKey should not wait for timeoutlen and show immediately
   triggers_nowait = {
     -- marks
@@ -242,7 +292,3 @@ require("luasnip.loaders.from_vscode").load {
 --------------------------------------------------------------------------------
 -- Colorscheme
 --vim.cmd[[colorscheme abscs]]
-
---------------------------------------------------------------------------------
--- Lua Plugin options / <Plugin>
---------------------------------------------------------------------------------

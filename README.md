@@ -24,6 +24,10 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 
 <img alt="focus" src="./screenshots/focus.png?raw=true" width="500" height="320" />
 
+### Split Windows
+
+<img alt="split" src="./screenshots/split-windows.png?raw=true" width="500" height="320" />
+
 ### Themes
 
 <img alt="themes" src="./screenshots/themes.png?raw=true" width="500" height="320" />

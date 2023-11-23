@@ -251,6 +251,12 @@ Plug 'ryanoasis/vim-devicons'  " Adds filetype glyphs (icons) to various vim
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
 
 " ------------------------------------------------------------------------------
+" Plugins / IDE / yode-nvim
+" ------------------------------------------------------------------------------
+Plug 'nvim-lua/plenary.nvim'  " All the lua functions I don't want to write twice
+Plug 'hoschi/yode-nvim'       " Focused code editing
+
+" ------------------------------------------------------------------------------
 " Plugins / Syntax / vim-polyglot
 " ------------------------------------------------------------------------------
 Plug 'sheerun/vim-polyglot'     " vim-polyglot
@@ -996,6 +1002,28 @@ let g:mkdp_combine_preview_auto_refresh = 1
 nmap <C-s> <Plug>MarkdownPreview
 nmap <M-s> <Plug>MarkdownPreviewStop
 nmap <C-p> <Plug>MarkdownPreviewToggle
+
+" ------------------------------------------------------------------------------
+" Plugin options / yode-nvim
+" ------------------------------------------------------------------------------
+" Minimal setup
+lua require('yode-nvim').setup({})
+
+" Mappings
+
+map <Leader>yc      :YodeCreateSeditorFloating<CR>
+map <Leader>yr :YodeCreateSeditorReplace<CR>
+nmap <Leader>bd :YodeBufferDelete<cr>
+imap <Leader>bd <esc>:YodeBufferDelete<cr>
+
+" These commands fall back to overwritten keys when cursor is in split window
+map <C-W>r :YodeLayoutShiftWinDown<CR>
+map <C-W>R :YodeLayoutShiftWinUp<CR>
+map <C-W>J :YodeLayoutShiftWinBottom<CR>
+map <C-W>K :YodeLayoutShiftWinTop<CR>
+
+" At the moment this is needed to have no gap for floating windows
+set showtabline=2
 
 " ------------------------------------------------------------------------------
 " Plugin options / vim-test
