@@ -24,3 +24,4 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 
 <img alt="themes" src="./screenshots/themes.png?raw=true" width="500" height="320" />
 
+### and much more ...
