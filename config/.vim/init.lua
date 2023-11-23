@@ -62,6 +62,24 @@ packer.startup(function()
     ----------------------------------------------------------------------------
     --use 'folke/lazy.nvim' -- A modern plugin manager for Neovim
 
+    --[[
+    ----------------------------------------------------------------------------
+    -- Lua Plugins / Snippets / LuaSnip
+    ----------------------------------------------------------------------------
+    use({
+        "L3MON4D3/LuaSnip",
+        -- follow latest release.
+        tag = "v2.*", -- Replace <CurrentMajor> by the latest released major
+        -- (first number of latest release)
+        -- install jsregexp (optional!:).
+        run = "make install_jsregexp"
+    })
+    ]]--
+
+    -- LuaSnip plugins list:
+    use "rafamadriz/friendly-snippets" -- Snippets collection for a set of
+                                       -- different programming languages.
+
     ----------------------------------------------------------------------------
     -- Lua Plugins / Themes / Abstract-cs
     ----------------------------------------------------------------------------
@@ -188,8 +206,39 @@ require("which-key").setup({
 --------------------------------------------------------------------------------
 --TODO:
 
+--[[
 --------------------------------------------------------------------------------
--- Lua Plugin options / Themes / Abstract-cs
+-- Lua Plugin options / LuaSnip
+--------------------------------------------------------------------------------
+-- Use existing VS Code style snippets from a plugin
+require("luasnip.loaders.from_vscode").lazy_load()
+
+-- Load snippets from path/of/your/nvim/config/my-cool-snippets
+require("luasnip.loaders.from_vscode").lazy_load({ paths = { "./my-cool-snippets" } })
+
+--------------------------------------------------------------------------------
+-- Lua Plugin options / LuaSnip: friendly-snippets
+--------------------------------------------------------------------------------
+-- Add extra snippets included, from a framework to a filetype.
+-- This is handled by your snippet engine and has nothing to do with this
+-- snippets collection.
+
+-- Add rails snippets to ruby.
+require("luasnip").filetype_extend("ruby", {"rails"})
+
+-- Make JavaScript React available for JavaScript files
+--require("luasnip").filetype_extend("typescript", { "javascript" })
+
+-- Exclude all javascript snippets
+-- This is handled by your snippet engine and has nothing to do with this
+-- snippets collection.
+require("luasnip.loaders.from_vscode").load {
+    exclude = { "javascript" },
+}
+]]--
+
+--------------------------------------------------------------------------------
+-- Lua Plugin options / Abstract-cs
 --------------------------------------------------------------------------------
 -- Colorscheme
 --vim.cmd[[colorscheme abscs]]
