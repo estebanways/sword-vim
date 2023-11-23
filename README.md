@@ -20,6 +20,10 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 
 <img alt="buffers" src="./screenshots/buffers.png?raw=true" width="500" height="320" />
 
+### Code Focus
+
+<img alt="focus" src="./screenshots/focus.png?raw=true" width="500" height="320" />
+
 ### Themes
 
 <img alt="themes" src="./screenshots/themes.png?raw=true" width="500" height="320" />
