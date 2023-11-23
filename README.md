@@ -2,6 +2,8 @@
 
 A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficiency.
 
+[![GitHub license](https://img.shields.io/github/license/estebanways/sword-vim.svg)](https://github.com/estebanways/sword-vim/blob/master/LICENSE) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/estebanways/sword-vim/graphs/commit-activity)
+
 ## Screenshots
 
 ### Key Mappings
