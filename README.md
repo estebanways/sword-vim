@@ -1,6 +1,6 @@
 # sword-vim
 
-A Vim/Neovim Text Editor and IDE
+A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficiency.
 
 ## Screenshots
 
