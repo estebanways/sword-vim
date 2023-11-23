@@ -1,8 +1,12 @@
+<div align="center">
+
 # sword-vim
 
 A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficiency.
 
 [![GitHub license](https://img.shields.io/github/license/estebanways/sword-vim.svg)](https://github.com/estebanways/sword-vim/blob/master/LICENSE) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/estebanways/sword-vim/graphs/commit-activity)
+
+</div>
 
 ## Screenshots
 
@@ -35,3 +39,17 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 <img alt="themes" src="./screenshots/themes.png?raw=true" width="500" height="320" />
 
 ### and much more ...
+
+## Contribute
+
+1. Fork it (https://github.com/estebanways/sword-vim/fork)
+2. Create your feature branch (<kbd>git checkout -b my-new-feature</kbd>)
+3. Commit your changes (<kbd>git commit -am 'Add some feature'</kbd>)
+4. Push to the branch (<kbd>git push origin my-new-feature</kbd>)
+5. Create a new Pull Request
+
+## License
+
+sword-vim is [MIT Licensed](./LICENSE).
+
+[estebanways]: https://github.com/estebanways
