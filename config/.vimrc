@@ -324,6 +324,12 @@ Plug 'tyewang/vimux-jest-test'  " vimux-jest-test
 Plug 'janko-m/vim-test' " vim-test
 
 " ------------------------------------------------------------------------------
+" Plugins / REST / vim-rest-console
+" ------------------------------------------------------------------------------
+" Helps send requests and displays responses from RESTful services
+Plug 'diepm/vim-rest-console'
+
+" ------------------------------------------------------------------------------
 " Vimscript Plugins END
 " ------------------------------------------------------------------------------
 call plug#end()
@@ -1011,7 +1017,7 @@ lua require('yode-nvim').setup({})
 
 " Mappings
 
-map <Leader>yc      :YodeCreateSeditorFloating<CR>
+map <Leader>yc :YodeCreateSeditorFloating<CR>
 map <Leader>yr :YodeCreateSeditorReplace<CR>
 nmap <Leader>bd :YodeBufferDelete<cr>
 imap <Leader>bd <esc>:YodeBufferDelete<cr>
@@ -1031,6 +1037,46 @@ set showtabline=2
 nnoremap <Leader>t :TestNearest<CR>
 nnoremap <Leader>T :TestFile<CR>
 nnoremap <Leader>TT :TestSuite<CR>
+
+" ------------------------------------------------------------------------------
+" Plugin options / vim-rest-console
+" ------------------------------------------------------------------------------
+" Multiple VRC Buffers
+:let b:vrc_output_buffer_name = '__NEW_VRC__'
+
+" VRC options
+
+" For the deprecated VRC options, they can be replaced by cUrl options. For
+" example, assuming they have been defined as follows:
+"let g:vrc_connect_timeout = 10
+"let g:vrc_cookie_jar = '/path/to/cookie'
+"let g:vrc_follow_redirects = 1
+"let g:vrc_include_response_header = 1
+"let g:vrc_max_time = 60
+"let g:vrc_resolve_to_ipv4 = 1
+"let g:vrc_ssl_secure = 1
+
+" Using cUrl options
+let g:vrc_curl_opts = {
+  \ '--connect-timeout' : 10,
+  \ '-b': '/path/to/cookie',
+  \ '-c': '/path/to/cookie',
+  \ '-L': '',
+  \ '-i': '',
+  \ '--max-time': 60,
+  \ '--ipv4': '',
+  \ '-k': '',
+\}
+
+" Enable/Disable Line-by-line Request Body
+let g:vrc_split_request_body = 1
+
+" Use in-line data, first enable the Elasticsearch support flag
+let g:vrc_elasticsearch_support = 1
+
+" Force the output highlighting based on filetype
+"let g:vrc_output_buffer_name = '__VRC_OUTPUT.<filetype>'
+let g:vrc_output_buffer_name = '__VRC_OUTPUT.json'
 
 " ------------------------------------------------------------------------------
 " Plugin options / Vimux
