@@ -6,13 +6,15 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 
 [![GitHub license](https://img.shields.io/github/license/estebanways/sword-vim.svg)](https://github.com/estebanways/sword-vim/blob/master/LICENSE) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/estebanways/sword-vim/graphs/commit-activity)
 
+<img alt="sword-vim" src="./images/stash.png?raw=true" width="500" height="320" />
+
 </div>
 
 ## Screenshots
 
 ### Key Mappings
 
-<img alt="sword-vim" src="./screenshots/sword-vim.png?raw=true" width="500" height="320" />
+<img alt="mappings" src="./screenshots/mappings.png?raw=true" width="500" height="320" />
 
 ### Basic Debugging
 
