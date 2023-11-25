@@ -53,8 +53,7 @@ The dev is open to suggestions and would iterate based on any constructive feedb
 ## Insights
 
 ![insights](./screenshots/insights.png)
-
-<sub>Image taken from GitHub</sub>
+<br />Image taken from GitHub
 
 ## Contribute
 
