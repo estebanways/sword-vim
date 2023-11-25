@@ -52,7 +52,7 @@ The dev is open to suggestions and would iterate based on any constructive feedb
 
 ## Insights
 
-<img alt="insights" src="./screenshots/insights.png?raw=true" width="500" height="320" />
+![insights](./screenshots/insights.png)
 <sub>Image taken from GitHub</sub>
 
 ## Contribute
