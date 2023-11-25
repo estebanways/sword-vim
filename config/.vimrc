@@ -131,6 +131,17 @@ Plug 'mlaursen/vim-react-snippets'
 Plug 'honza/vim-snippets'
 
 " ------------------------------------------------------------------------------
+" Plugins / Comments / nerdcommenter
+" ------------------------------------------------------------------------------
+Plug 'scrooloose/nerdcommenter'  " Comments functions so powerful—no comment
+                                 " necessary.
+
+" ------------------------------------------------------------------------------
+" Plugins / Comments / commentary.vim
+" ------------------------------------------------------------------------------
+Plug 'tpope/vim-commentary'  " Comment stuff out
+
+" ------------------------------------------------------------------------------
 " Plugins / Typing / closetag
 " ------------------------------------------------------------------------------
 Plug 'alvan/vim-closetag'  " Creates closing HTML like tags when typing
@@ -140,6 +151,11 @@ Plug 'alvan/vim-closetag'  " Creates closing HTML like tags when typing
 " ------------------------------------------------------------------------------
 Plug 'tpope/vim-surround'  " It's all about "surroundings": parentheses, brackets,
                            " quotes, XML tags, and more.
+
+" ------------------------------------------------------------------------------
+" Plugins / Finder / fzf
+" ------------------------------------------------------------------------------
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }  " fzf
 
 " ------------------------------------------------------------------------------
 " Plugins / Formatting / vim-easy-align
@@ -153,11 +169,6 @@ Plug 'mg979/vim-visual-multi'  " Improves actions like: select a word, create
                                " multiple cursors, and create cursors vertically.
 
 " ------------------------------------------------------------------------------
-" Plugins / Color / vim-css-color
-" ------------------------------------------------------------------------------
-Plug 'ap/vim-css-color'  " Color
-
-" ------------------------------------------------------------------------------
 " Plugins / Formatting / vim-prettier
 " ------------------------------------------------------------------------------
 " Post install (yarn install | npm install) then load plugin only for editing
@@ -165,6 +176,11 @@ Plug 'ap/vim-css-color'  " Color
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install --frozen-lockfile --production',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
+
+" ------------------------------------------------------------------------------
+" Plugins / Color / vim-css-color
+" ------------------------------------------------------------------------------
+Plug 'ap/vim-css-color'  " Color
 
 " ------------------------------------------------------------------------------
 " Plugins / Git / vim-fugitive
@@ -203,11 +219,6 @@ Plug 'christoomey/vim-tmux-navigator'
 "Plug 'editorconfig/editorconfig-vim'  " EditorConfig
 
 " ------------------------------------------------------------------------------
-" Plugins / IDE / fzf
-" ------------------------------------------------------------------------------
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }  " fzf
-
-" ------------------------------------------------------------------------------
 " Plugins / IDE / vim-signify
 " ------------------------------------------------------------------------------
 " Signify (or just Sy) uses the sign column to indicate added, modified and
@@ -219,17 +230,6 @@ Plug 'mhinz/vim-signify'
 " ------------------------------------------------------------------------------
 Plug 'yggdroot/indentline'  " Displays thin vertical lines at each indentation
                             " level for code indented with spaces.
-
-" ------------------------------------------------------------------------------
-" Plugins / IDE / nerdcommenter
-" ------------------------------------------------------------------------------
-Plug 'scrooloose/nerdcommenter'  " Comments functions so powerful—no comment
-                                 " necessary.
-
-" ------------------------------------------------------------------------------
-" Plugins / IDE / commentary.vim
-" ------------------------------------------------------------------------------
-Plug 'tpope/vim-commentary'  " Comment stuff out
 
 " ------------------------------------------------------------------------------
 " Plugins / IDE / lightline.vim
@@ -677,22 +677,6 @@ let g:startify_custom_header =
        \ startify#pad(split(system('figlet -w 100 SWORD VIM'), '\n'))
 
 " ------------------------------------------------------------------------------
-" Plugin options / fzf
-" ------------------------------------------------------------------------------
-"let $FZF_DEFAULT_OPTS='--layout=reverse'  " Search input above
-
-" ------------------------------------------------------------------------------
-" Plugin options / Styled-components
-" ------------------------------------------------------------------------------
-" Break syntax colorization in very long files. Use at own risk!
-" Makes vim consider all lines in the file for syntax highlighting if it
-" encounters a javascript/typescript file.
-"autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
-" Reset this value if it leaves the buffer again. (This will also reset
-" previously set syntax-syncing settings, that you or other plugins might have set.)
-"autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
-
-" ------------------------------------------------------------------------------
 " Plugin options / Vim-polyglot
 " ------------------------------------------------------------------------------
 " Disable individual language packs
@@ -825,21 +809,6 @@ let g:indentLine_char = '|'
 " the following vars:
 "let g:vim_json_conceal=0
 "let g:markdown_syntax_conceal=0
-
-" ------------------------------------------------------------------------------
-" Plugin options / nerdcommenter
-" ------------------------------------------------------------------------------
-" Leverage support for selections (keys: leader, c, <option_key>)
-nnoremap <silent> <leader>c} V}:call NERDComment('x', 'toggle')<CR>
-nnoremap <silent> <leader>c{ V{:call NERDComment('x', 'toggle')<CR>
-
-" ------------------------------------------------------------------------------
-" Plugin options / commentary.vim
-" ------------------------------------------------------------------------------
-" Add unsupported file types
-
-" Add comment out support for Apache configuration files
-autocmd FileType apache setlocal commentstring=#\ %s
 
 " ------------------------------------------------------------------------------
 " Plugin options / lightline.vim
@@ -1113,6 +1082,21 @@ map <Leader>vz :call VimuxZoomRunner()<CR>
 map <Leader>v<C-l> :VimuxClearTerminalScreen<CR>
 
 " ------------------------------------------------------------------------------
+" Plugin options / nerdcommenter
+" ------------------------------------------------------------------------------
+" Leverage support for selections (keys: leader, c, <option_key>)
+nnoremap <silent> <leader>c} V}:call NERDComment('x', 'toggle')<CR>
+nnoremap <silent> <leader>c{ V{:call NERDComment('x', 'toggle')<CR>
+
+" ------------------------------------------------------------------------------
+" Plugin options / commentary.vim
+" ------------------------------------------------------------------------------
+" Add unsupported file types
+
+" Add comment out support for Apache configuration files
+autocmd FileType apache setlocal commentstring=#\ %s
+
+" ------------------------------------------------------------------------------
 " Plugin options / closetag.vim
 " ------------------------------------------------------------------------------
 " Filenames like *.xml, *.html, *.xhtml, ...
@@ -1155,6 +1139,22 @@ let g:closetag_close_shortcut = '<leader>>'
 " Options: integer value [0|1]
 " Enable closing tags for React fragments -> <></> for all supported file types
 "let g:closetag_enable_react_fragment = 1
+
+" ------------------------------------------------------------------------------
+" Plugin options / fzf
+" ------------------------------------------------------------------------------
+"let $FZF_DEFAULT_OPTS='--layout=reverse'  " Search input above
+
+" ------------------------------------------------------------------------------
+" Plugin options / Styled-components
+" ------------------------------------------------------------------------------
+" Break syntax colorization in very long files. Use at own risk!
+" Makes vim consider all lines in the file for syntax highlighting if it
+" encounters a javascript/typescript file.
+"autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+" Reset this value if it leaves the buffer again. (This will also reset
+" previously set syntax-syncing settings, that you or other plugins might have set.)
+"autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 
 " ------------------------------------------------------------------------------
 " Plugin options / codeium.vim
