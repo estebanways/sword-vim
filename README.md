@@ -54,6 +54,8 @@ The dev is open to suggestions and would iterate based on any constructive feedb
 
 <img alt="insights" src="./screenshots/insights.png?raw=true" width="500" height="320" />
 
+<sub>Image taken from GitHub<sub>
+
 ## Contribute
 
 1. Fork it (https://github.com/estebanways/sword-vim/fork)
