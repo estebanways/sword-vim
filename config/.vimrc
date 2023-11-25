@@ -32,7 +32,8 @@ set hlsearch                " Highlights matches
 set incsearch               " Incremental searching
 set ignorecase              " Searches are case insensitive ...
 set smartcase               " ... unless they contain at least one capital letter
-set laststatus=2            " Controls when/how to display the status-bar
+set laststatus=2            " Controls when/how to display the status-bar. Options:
+                            " 0 (hidden), 1 (shown if two or more windows), 2 (shown).
 set noshowmode              " Removes the modes bar at the end of the editor
 
 " Spelling
