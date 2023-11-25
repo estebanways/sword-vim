@@ -53,7 +53,7 @@ The dev is open to suggestions and would iterate based on any constructive feedb
 ## Insights
 
 <img alt="insights" src="./screenshots/insights.png?raw=true" width="500" height="320" />
-<sub>Image taken from GitHub<sub>
+<sub>Image taken from GitHub</sub>
 
 ## Contribute
 
