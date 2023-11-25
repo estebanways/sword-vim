@@ -44,7 +44,11 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 
 <img alt="themes" src="./screenshots/themes.png?raw=true" width="500" height="320" />
 
-### and much more ...
+### and much more features ...
+
+The code becomes self-explanatory and easy to understand by utilizing single configuration files. This not only allows for easy customization and swift switching among options, providing flexibility for code adjustments as needed, but also simplifies the development process, and makes it easier for other developers to read and maintain the code. It's a great way to improve the overall quality of your code while saving time and effort.
+
+The dev is open to suggestions and would iterate based on any constructive feedback received.
 
 ## Contribute
 
