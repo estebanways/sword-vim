@@ -50,6 +50,10 @@ The code becomes self-explanatory and easy to understand by utilizing single con
 
 The dev is open to suggestions and would iterate based on any constructive feedback received.
 
+## Insights
+
+<img alt="insights" src="./screenshots/insights.png?raw=true" width="500" height="320" />
+
 ## Contribute
 
 1. Fork it (https://github.com/estebanways/sword-vim/fork)
