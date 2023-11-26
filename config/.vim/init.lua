@@ -49,6 +49,20 @@ packer.startup(function()
     }
 
     ----------------------------------------------------------------------------
+    -- Lua Plugins / Finder / telescope.nvim
+    ----------------------------------------------------------------------------
+    -- A Highly extendable fuzzy finder over lists
+    use {
+        'nvim-telescope/telescope.nvim',
+        tag = '0.1.4',
+        -- or branch = '0.1.x',
+        requires = {
+            {'nvim-lua/plenary.nvim'},
+            -- Add extensions here
+        }
+    }
+
+    ----------------------------------------------------------------------------
     -- Lua Plugins / Help / which-key.nvim
     ----------------------------------------------------------------------------
     -- It displays a popup with possible keybindings of the command you started
@@ -158,6 +172,135 @@ vim.cmd("autocmd! User NERDTreeToggle :lua require'bufferline_config'.toggle_off
 --------------------------------------------------------------------------------
 -- This example plugin generates an error message when nvim starts, but it works
 --require("alpha").setup(require("alpha.themes.startify").config)
+
+--------------------------------------------------------------------------------
+-- Lua Plugin options / telescope.nvim
+--------------------------------------------------------------------------------
+local status_ok, telescope = pcall(require, "telescope")
+if not status_ok then
+  return
+end
+
+local actions = require "telescope.actions"
+
+telescope.setup {
+  defaults = {
+
+    prompt_prefix = " ",
+    selection_caret = " ",
+    path_display = { "smart" },
+
+    layout_config = {
+      width = 0.75,  -- Width of the telescope window
+      height = 0.75,  -- Height of the telescope window
+      prompt_position = "top",  -- Position of the prompt ("top" or "bottom")
+      horizontal = {
+        -- Horizontal configuration options
+        preview_cutoff = 80,  -- Max height for the horizontal preview
+        prompt_position = "bottom",  -- Position of the prompt for horizontal layout
+      },
+      vertical = {
+        -- Vertical configuration options
+        preview_cutoff = 120,  -- Max height for the vertical preview
+      },
+      flex = {
+        -- Flex layout configuration options
+        flip_columns = 130,  -- Width at which to flip columns in flex layout
+      },
+    },
+
+    mappings = {
+      i = {
+        ["<C-n>"] = actions.cycle_history_next,
+        ["<C-p>"] = actions.cycle_history_prev,
+
+        ["<C-j>"] = actions.move_selection_next,
+        ["<C-k>"] = actions.move_selection_previous,
+
+        ["<C-c>"] = actions.close,
+
+        ["<Down>"] = actions.move_selection_next,
+        ["<Up>"] = actions.move_selection_previous,
+
+        ["<CR>"] = actions.select_default,
+        ["<C-x>"] = actions.select_horizontal,
+        ["<C-v>"] = actions.select_vertical,
+        ["<C-t>"] = actions.select_tab,
+
+        ["<C-u>"] = actions.preview_scrolling_up,
+        ["<C-d>"] = actions.preview_scrolling_down,
+
+        ["<PageUp>"] = actions.results_scrolling_up,
+        ["<PageDown>"] = actions.results_scrolling_down,
+
+        ["<Tab>"] = actions.toggle_selection + actions.move_selection_worse,
+        ["<S-Tab>"] = actions.toggle_selection + actions.move_selection_better,
+        ["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
+        ["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
+        ["<C-l>"] = actions.complete_tag,
+        ["<C-_>"] = actions.which_key, -- keys from pressing <C-/>
+      },
+
+      n = {
+        ["<esc>"] = actions.close,
+        ["<CR>"] = actions.select_default,
+        ["<C-x>"] = actions.select_horizontal,
+        ["<C-v>"] = actions.select_vertical,
+        ["<C-t>"] = actions.select_tab,
+
+        ["<Tab>"] = actions.toggle_selection + actions.move_selection_worse,
+        ["<S-Tab>"] = actions.toggle_selection + actions.move_selection_better,
+        ["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
+        ["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
+
+        ["j"] = actions.move_selection_next,
+        ["k"] = actions.move_selection_previous,
+        ["H"] = actions.move_to_top,
+        ["M"] = actions.move_to_middle,
+        ["L"] = actions.move_to_bottom,
+
+        ["<Down>"] = actions.move_selection_next,
+        ["<Up>"] = actions.move_selection_previous,
+        ["gg"] = actions.move_to_top,
+        ["G"] = actions.move_to_bottom,
+
+        ["<C-u>"] = actions.preview_scrolling_up,
+        ["<C-d>"] = actions.preview_scrolling_down,
+
+        ["<PageUp>"] = actions.results_scrolling_up,
+        ["<PageDown>"] = actions.results_scrolling_down,
+
+        ["?"] = actions.which_key,
+      },
+    },
+  },
+
+  pickers = {
+    -- Default configuration for builtin pickers goes here:
+    -- picker_name = {
+    --   picker_config_key = value,
+    --   ...
+    -- }
+    -- Now the picker_config_key will be applied every time you call this
+    -- builtin picker
+    planets = {
+      show_pluto = true,
+    },
+    --[[
+    find_files = {
+      theme = "cursor",
+    },
+    ]]--
+  },
+
+  extensions = {
+    -- Your extension configuration goes here:
+    -- extension_name = {
+    --   extension_config_key = value,
+    -- }
+    -- please take a look at the readme of the extension you want to configure
+  },
+}
 
 --------------------------------------------------------------------------------
 -- Lua Plugin options / which-key.nvim
