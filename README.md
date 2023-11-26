@@ -16,6 +16,10 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 
 <img alt="mappings" src="./screenshots/mappings.png?raw=true" width="500" height="320" />
 
+### File Finder
+
+<img alt="finder" src="./screenshots/finder.png?raw=true" width="500" height="320" />
+
 ### Basic Debugging
 
 <img alt="debugging" src="./screenshots/debugging.png?raw=true" width="500" height="320" />
