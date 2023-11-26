@@ -142,7 +142,8 @@ zplug "plugins/git",   from:oh-my-zsh
 #zplug "modules/prompt", from:prezto
 
 # Load if "if" tag returns true
-zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $OSTYPE == *linux* ]]"
+#zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $OSTYPE == *linux* ]]"
+zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $(uname) == 'Linux' ]]"
 
 # Run a command after a plugin is installed/updated
 # Provided, it requires to set the variable like the following:
