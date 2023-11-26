@@ -1,40 +1,49 @@
 " File: .vimrc
 " Author: Esteban Herrera Castro, stv.herrera@gmail.com
 " Date: 31.10.2023
-" Last Modified Date: 11.15.2023
+" Last Modified Date: 11.25.2023
 " Last Modified By: Esteban Herrera Castro, stv.herrera@gmail.com
 
 " ------------------------------------------------------------------------------
 " Basics
 " ------------------------------------------------------------------------------
 set number                  " Adds line numbers
-set mouse=a                 " Enables mouse drag and drop and click to move cursor
 set numberwidth=1           " Defines the width of line numbers
+set relativenumber          " Displays the distance from the current line to every
+                            " other line.
+
+set scrolloff=5             " Determines the number of context lines above and
+                            " below the cursor.
+set ruler                   " Shows the cursor position (y, x)
+set cursorline              " Underlines the current line
+
+set mouse=a                 " Enables mouse drag and drop and click to move cursor
 "set clipboard=unnamed      " Allows the mouse to copy and paste selection
 set clipboard+=unnamedplus  " This requires xclip (x11) or wl-clipboard (wayland)
                             " to 'yy' for copying selection or line to the system's
                             " clipboard. Paste using 'p' or CTRL + SHIFT + v.
-syntax enable               " Colorizes text
-set showcmd                 " Shows the executing commands (keyboard keys)
-set ruler                   " Shows the cursor position (y, x)
-set cursorline              " Underlines the current line
+
 set termguicolors           " Enables true color support in the terminal
-set encoding=utf-8          " Defines encoding
+syntax enable               " Colorizes text
+
 set showmatch               " Highlights the matching parentheses
+
 set sw=2                    " Changes tabulation with TAB to 2 spaces
-set relativenumber          " Displays the distance from the current line to every
-                            " other line.
-set scrolloff=5             " Determines the number of context lines above and
-                            " below the cursor.
 
 " Searching
 set hlsearch                " Highlights matches
 set incsearch               " Incremental searching
 set ignorecase              " Searches are case insensitive ...
 set smartcase               " ... unless they contain at least one capital letter
+
+" Bar
 set laststatus=2            " Controls when/how to display the status-bar. Options:
                             " 0 (hidden), 1 (shown if two or more windows), 2 (shown).
 set noshowmode              " Removes the modes bar at the end of the editor
+
+set showcmd                 " Shows the executing commands (keyboard keys)
+
+set encoding=utf-8          " Defines encoding
 
 " Spelling
 set spelllang=en_us         " Sets the spelling language for English (United States)
