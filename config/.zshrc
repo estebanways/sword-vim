@@ -130,7 +130,7 @@ zplug "zsh-users/zsh-history-substring-search"
 zplug "Jxck/dotfiles", as:command, use:"bin/{histuniq,color}"
 
 # Can manage everything e.g., other person's zshrc
-zplug "tcnksm/docker-alias", use:zshrc
+#zplug "tcnksm/docker-alias", use:zshrc
 
 # Disable updates using the "frozen" tag
 zplug "k4rthik/git-cal", as:command, frozen:1
