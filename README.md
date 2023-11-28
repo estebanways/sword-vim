@@ -24,6 +24,10 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 
 <img alt="debugging" src="./screenshots/debugging.png?raw=true" width="500" height="320" />
 
+### Diagnostics Indicators
+
+<img alt="indicators" src="./screenshots/indicators.png?raw=true" width="500" height="320" />
+
 ### Code Analysis
 
 <img alt="analysis" src="./screenshots/analysis.png?raw=true" width="500" height="320" />
