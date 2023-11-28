@@ -1,5 +1,6 @@
 # Ignore both directories and files with this name
 **/pack/
+**/spell/
 
 # Ignore certain files within a directory with spaces
 #my\ directory/*.txt
