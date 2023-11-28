@@ -194,7 +194,7 @@ Plug 'ap/vim-css-color'  " Color
 " ------------------------------------------------------------------------------
 " Plugins / Git / vim-fugitive
 " ------------------------------------------------------------------------------
-Plug 'tpope/vim-fugitive'  " Git version control system
+Plug 'tpope/vim-fugitive'  " Git wrapper for Vim
 
 " ------------------------------------------------------------------------------
 " Plugins / Git / vim-gitbranch
