@@ -194,7 +194,7 @@ Plug 'ap/vim-css-color'  " Color
 " ------------------------------------------------------------------------------
 " Plugins / Git / vim-fugitive
 " ------------------------------------------------------------------------------
-Plug 'tpope/vim-fugitive'  " Git version control system
+Plug 'tpope/vim-fugitive'  " Git wrapper for Vim
 
 " ------------------------------------------------------------------------------
 " Plugins / Git / vim-gitbranch
@@ -247,6 +247,9 @@ Plug 'itchyny/lightline.vim'   " Status bar
 
 Plug 'maximbaz/lightline-ale'  " Lightline plugin ALE
 
+Plug 'josa42/vim-lightline-coc'  " Provides coc diagnostics indicator for the
+                                 " lightline vim plugin.
+
 " ------------------------------------------------------------------------------
 " Plugins / IDE / vim-devicons
 " ------------------------------------------------------------------------------
@@ -298,7 +301,9 @@ Plug 'rosstimson/bats.vim'  " Extends the built in shell highlighting (sh.vim)
 " ------------------------------------------------------------------------------
 Plug 'morhetz/gruvbox'                " Theme gruvbox
 Plug 'shinchu/lightline-gruvbox.vim'  " Theme lightline-gruvbox.vim
+
 Plug 'mhartington/oceanic-next'       " Theme OceanicNext
+
 Plug 'Mofiqul/dracula.nvim'           " Theme Dracula
 
 " ------------------------------------------------------------------------------
@@ -822,48 +827,64 @@ let g:indentLine_char = '|'
 " ------------------------------------------------------------------------------
 " Plugin options / lightline.vim
 " ------------------------------------------------------------------------------
-" Custom settings, include ALE plugin options as well
+" Custom settings
+
+" Show git branch icon in lightline
+function MyFugitiveHead()
+  let head = FugitiveHead()
+  if head != ""
+    let head = "\uf126 " .. head
+  endif
+  return head
+endfunction
+
+" ALE plugin options, including vim-lightline-coc diagnostics
+" indicator as well.
 let g:lightline = {
-      \ 'colorscheme': 'ayu_dark',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
-      \  'right': [ [ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_infos', 'linter_ok' ],
-      \              [ 'lineinfo' ],
-      \              [ 'percent' ],
-      \              [ 'fileformat', 'fileencoding', 'filetype', 'charvaluehex' ] ]
-      \ },
-      \ 'component': {
-      \   'charvaluehex': '0x%B'
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'FugitiveHead'
-      \ },
-      \ }
+  \ 'colorscheme': 'ayu_dark',
+  \ 'active': {
+  \   'left': [ [ 'mode', 'paste' ],
+  \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
+  \  'right': [ [ 'coc_info', 'coc_hints', 'coc_errors', 'coc_warnings', 'coc_ok' ], [ 'coc_status' ],
+  \              [ 'lineinfo' ],
+  \              [ 'percent' ],
+  \              [ 'fileformat', 'fileencoding', 'filetype', 'charvaluehex' ] ]
+  \ },
+  \ 'component': {
+  \   'charvaluehex': '0x%B'
+  \ },
+  \ 'component_function': {
+  \   'gitbranch': 'MyFugitiveHead'
+  \ },
+  \ }
 
-" Lightline plugin ALE options
+" Register the compoments
+call lightline#coc#register()
 
+if 0
 " Override the previous declaration, resetting the custom bar configuration
 "let g:lightline = {}
 
-" Register the components
+" Register the components (manually)
 " Components
 let g:lightline.component_expand = {
-      \  'linter_checking': 'lightline#ale#checking',
-      \  'linter_infos': 'lightline#ale#infos',
-      \  'linter_warnings': 'lightline#ale#warnings',
-      \  'linter_errors': 'lightline#ale#errors',
-      \  'linter_ok': 'lightline#ale#ok',
-      \ }
+  \   'linter_warnings': 'lightline#coc#warnings',
+  \   'linter_errors': 'lightline#coc#errors',
+  \   'linter_info': 'lightline#coc#info',
+  \   'linter_hints': 'lightline#coc#hints',
+  \   'linter_ok': 'lightline#coc#ok',
+  \   'status': 'lightline#coc#status',
+  \ }
 
 " Set color to the components
 let g:lightline.component_type = {
-      \     'linter_checking': 'right',
-      \     'linter_infos': 'right',
-      \     'linter_warnings': 'warning',
-      \     'linter_errors': 'error',
-      \     'linter_ok': 'right',
-      \ }
+  \   'linter_warnings': 'warning',
+  \   'linter_errors': 'error',
+  \   'linter_info': 'info',
+  \   'linter_hints': 'hints',
+  \   'linter_ok': 'left',
+  \ }
+endif
 
 " ------------------------------------------------------------------------------
 " Plugin options / markdown-preview.nvim
