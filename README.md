@@ -15,7 +15,7 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 [Key Mappings](./screenshots/mappings.png?raw=true) | [Lists Finder](./screenshots/finder.png?raw=true) | 
 [Basic Debugging](./screenshots/debugging.png?raw=true) | [Diagnostics Indicators](./screenshots/indicators.png?raw=true) | 
 [Code Analysis](./screenshots/analysis.png?raw=true) | [Auto-completion and Suggestions](./screenshots/auto-completion.png?raw=true) | 
-[Focus Coding](./screenshots/focus.png?raw=true) | [Split Windows](./screenshots/split-windows.png?raw=true)
+[Focus Coding](./screenshots/focus.png?raw=true) | [Split Windows](./screenshots/split-windows.png?raw=true) | 
 [REST Client](./screenshots/rest.png?raw=true) | [Themes](./screenshots/themes.png?raw=true)
 
 And much more features ...
