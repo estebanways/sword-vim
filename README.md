@@ -1,6 +1,6 @@
 <div align="center">
 
-# sword-vim
+# sword-vim 🗡️
 
 A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficiency.
 
@@ -12,51 +12,105 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 
 ## Screenshots
 
-### Key Mappings
+[Key Mappings](./screenshots/mappings.png?raw=true) | [Lists Finder](./screenshots/finder.png?raw=true) | 
+[Basic Debugging](./screenshots/debugging.png?raw=true) | [Diagnostics Indicators](./screenshots/indicators.png?raw=true) | 
+[Code Analysis](./screenshots/analysis.png?raw=true) | [Auto-completion and Suggestions](./screenshots/auto-completion.png?raw=true) | 
+[Focus Coding](./screenshots/focus.png?raw=true) | [Split Windows](./screenshots/split-windows.png?raw=true) | 
+[REST Client](./screenshots/rest.png?raw=true) | [Themes](./screenshots/themes.png?raw=true)
 
-<img alt="mappings" src="./screenshots/mappings.png?raw=true" width="500" height="320" />
+## Installation
 
-### Lists Finder
+1. **Requirements:**
+   - Neovim: Ensure Neovim is installed on your system. You can typically install it using your system's package manager (e.g., `apt`, `brew`, `yum`).
+   - Git: The installation process often involves cloning repositories, so having Git installed is essential.
 
-<img alt="finder" src="./screenshots/finder.png?raw=true" width="500" height="320" />
+2. **Plugin Manager (Optional but recommended):**
+   - Choose a plugin manager. Popular ones include `vim-plug`, `Dein.vim`, and `packer.nvim`.
+   - Follow the installation instructions for your chosen plugin manager.
 
-### Basic Debugging
+3. **Configuration:**
+   - Create a Neovim configuration file. The default location is `~/.config/nvim/init.vim` or `~/.vimrc` for Vim compatibility.
+   - Add your chosen plugin manager setup to the configuration file.
+   - Configure basic settings like line numbers, syntax highlighting, etc.
 
-<img alt="debugging" src="./screenshots/debugging.png?raw=true" width="500" height="320" />
+4. **Adding Plugins:**
+   - Use your plugin manager to add plugins to Neovim. Plugins are typically specified in the configuration file.
+   - Example with `vim-plug`:
+     ```vim
+     call plug#begin('~/.vim/plugged')
+     " Add your plugins here
+     Plug 'user/plugin-name'
+     call plug#end()
+     ```
 
-### Diagnostics Indicators
+5. **Customization:**
+   - Customize key mappings, colorschemes, and other preferences based on your needs.
+   - Keep in mind that some plugins may require additional configuration.
 
-<img alt="indicators" src="./screenshots/indicators.png?raw=true" width="500" height="320" />
+6. **Adapt to System Configuration:**
+   - Be aware that specific configurations might be needed based on your operating system.
+   - Some plugins might have dependencies that need to be installed separately.
 
-### Code Analysis
+7. **Updates:**
+   - Regularly update your plugins using your plugin manager.
+   - Stay informed about changes in Neovim or your plugins that might affect your configuration.
 
-<img alt="analysis" src="./screenshots/analysis.png?raw=true" width="500" height="320" />
+## Plugins Included
 
-### Auto-completion and Suggestions
+### VimL Plugins
 
-<img alt="auto-completion" src="./screenshots/auto-completion.png?raw=true" width="500" height="320" />
+| Category               | VimL Plugin                                                         | Description                                                 |
+| ----------------------------- | ------------------------------------------------------------ | ----------------------------------------------------------- |
+| Auto-complete Plugins        | [tpope/vim-repeat](https://github.com/tpope/vim-repeat)      | Allows repeating the last command.                          |
+|                               | [github/copilot.vim](https://github.com/github/copilot.vim)  | GitHub's Copilot.                                           |
+|                               | [Exafunction/codeium.vim](https://github.com/Exafunction/codeium.vim) | Codeium.vim.                                                |
+| Snippets Plugins             | [neoclide/coc.nvim](https://github.com/neoclide/coc.nvim)    | Conquer of completion with additional text editing support. |
+|                               | [sirver/ultisnips](https://github.com/sirver/ultisnips)      | Ultimate solution for snippets in Vim.                      |
+|                               | [honza/vim-snippets](https://github.com/honza/vim-snippets)  | Snippets for various languages.                             |
+| Comments Plugins             | [scrooloose/nerdcommenter](https://github.com/scrooloose/nerdcommenter) | Powerful commenting functions.                              |
+|                               | [tpope/vim-commentary](https://github.com/tpope/vim-commentary) | Commenting utility.                                         |
+| Typing Plugins               | [alvan/vim-closetag](https://github.com/alvan/vim-closetag)  | Creates closing HTML tags when typing.                      |
+|                               | [tpope/vim-surround](https://github.com/tpope/vim-surround)  | Manipulates surroundings like parentheses and quotes.        |
+| Finder Plugins               | [junegunn/fzf](https://github.com/junegunn/fzf)              | Fuzzy finder for the terminal.                              |
+| Formatting Plugins           | [mg979/vim-visual-multi](https://github.com/mg979/vim-visual-multi) | Enhances actions like creating multiple cursors.            |
+|                               | [prettier/vim-prettier](https://github.com/prettier/vim-prettier) | Integrates Prettier for supported files.                    |
+| Color Plugins                | [ap/vim-css-color](https://github.com/ap/vim-css-color)      | Provides color highlighting for CSS.                        |
+| Git Plugins                  | [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)  | Git wrapper for Vim.                                        |
+|                               | [itchyny/vim-gitbranch](https://github.com/itchyny/vim-gitbranch) | Provides the name of the git branch.                        |
+| IDE Plugins                  | [mhinz/vim-startify](https://github.com/mhinz/vim-startify)  | Creates a start screen with bookmarks.                      |
+|                               | [easymotion/vim-easymotion](https://github.com/easymotion/vim-easymotion) | Enhances motion in Vim.                                     |
+|                               | [scrooloose/nerdtree](https://github.com/scrooloose/nerdtree) | File system explorer.                                       |
+|                               | [christoomey/vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator) | Integrates navigation between Vim and Tmux.               |
+|                               | [itchyny/lightline.vim](https://github.com/itchyny/lightline.vim) | Status bar for Vim.                                        |
+| DevIcons and Themes          | [ryanoasis/vim-devicons](https://github.com/ryanoasis/vim-devicons) | Adds filetype glyphs.                                       |
+|                               | [morhetz/gruvbox](https://github.com/morhetz/gruvbox)        | Gruvbox theme.                                              |
+|                               | [shinchu/lightline-gruvbox.vim](https://github.com/shinchu/lightline-gruvbox.vim) | Lightline theme for Gruvbox.                               |
+|                               | [mhartington/oceanic-next](https://github.com/mhartington/oceanic-next) | OceanicNext theme.                                          |
+|                               | [Mofiqul/dracula.nvim](https://github.com/Mofiqul/dracula.nvim) | Dracula theme.                                              |
+| Other Productivity Plugins   | [tribela/vim-transparent](https://github.com/tribela/vim-transparent) | Adds transparency to Vim.                                   |
+|                               | [wakatime/vim-wakatime](https://github.com/wakatime/vim-wakatime) | Tracks coding activity.                                     |
+|                               | [benmills/vimux](https://github.com/benmills/vimux)        | Tmux integration.                                           |
+|                               | [itspriddle/vim-shellcheck](https://github.com/itspriddle/vim-shellcheck) | Finds errors in bash/sh scripts.                            |
+|                               | [tyewang/vimux-jest-test](https://github.com/tyewang/vimux-jest-test) | Jest test integration.                                     |
+|                               | [janko-m/vim-test](https://github.com/janko-m/vim-test)    | Test runner for Vim.                                       |
+|                               | [diepm/vim-rest-console](https://github.com/diepm/vim-rest-console) | REST console for sending requests and displaying responses. |
+| Syntax Plugins               | [sheerun/vim-polyglot](https://github.com/sheerun/vim-polyglot) | Language pack for various languages.                        |
+|                               | [styled-components/vim-styled-components](https://github.com/styled-components/vim-styled-components) | Styled Components syntax highlighting.                   |
+|                               | [kovetskiy/vim-bash](https://github.com/kovetskiy/vim-bash) | Fixes syntax issues with bash files.                        |
+|                               | [rosstimson/bats.vim](https://github.com/rosstimson/bats.vim) | Extends shell highlighting for Bats.                        |
 
-### Focus Coding
+### Lua Plugins
 
-<img alt="focus" src="./screenshots/focus.png?raw=true" width="500" height="320" />
-
-### Split Windows
-
-<img alt="split" src="./screenshots/split-windows.png?raw=true" width="500" height="320" />
-
-### REST Client
-
-<img alt="rest" src="./screenshots/rest.png?raw=true" width="500" height="320" />
-
-### Themes
-
-<img alt="themes" src="./screenshots/themes.png?raw=true" width="500" height="320" />
-
-### And much more features ...
-
-The code becomes self-explanatory and easy to understand by utilizing single configuration files. This not only allows for easy customization and swift switching among options, providing flexibility for code adjustments as needed, but also simplifies the development process, and makes it easier for other developers to read and maintain the code. It's a great way to improve the overall quality of your code while saving time and effort.
-
-The dev is open to suggestions and would iterate based on any constructive feedback received.
+| Category                              | Lua Plugin                                 | Description                                      |
+| --------------------------------------| ------------------------------------------------------------- | ------------------------------------------------ |
+| Additional Lua Plugins               | [akinsho/bufferline.nvim](https://github.com/akinsho/bufferline.nvim) | Snazzy buffer line with tabpage integration.     |
+| Buffer Line Plugin                    | [goolord/alpha-nvim](https://github.com/goolord/alpha-nvim)   | Lua powered greeter like vim-startify/dashboard-nvim. |
+| Dashboard Plugin                     | [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) | Highly extendable fuzzy finder over lists.       |
+| Fuzzy Finder Plugin                  | [folke/which-key.nvim](https://github.com/folke/which-key.nvim) | Displays a popup with possible keybindings.     |
+| Keybinding Popup Plugin              | [folke/lazy.nvim](https://github.com/folke/lazy.nvim)         | Modern plugin manager for Neovim (commented out in the code). |
+| Lazy Plugin Manager (Commented Out)  | [rafamadriz/friendly-snippets](https://github.com/rafamadriz/friendly-snippets) | Snippets collection for various programming languages. |
+| Snippets Plugins                     | [Abstract-IDE/Abstract-cs](https://github.com/Abstract-IDE/Abstract-cs) | Colorscheme for Neovim with Tree-sitter support. |
+| Abstract-cs Theme                    | [junegunn/vim-easy-align](https://github.com/junegunn/vim-easy-align) | Easy-to-use Vim alignment.                       |
 
 ## Insights
 
