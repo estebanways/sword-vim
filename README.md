@@ -32,7 +32,7 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 
 <img alt="analysis" src="./screenshots/analysis.png?raw=true" width="500" height="320" />
 
-### Multiple Tabs
+### Auto-completion and Suggestions
 
 <img alt="auto-completion" src="./screenshots/auto-completion.png?raw=true" width="500" height="320" />
 
