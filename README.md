@@ -14,43 +14,45 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 
 ### Key Mappings
 
-<img alt="mappings" src="./screenshots/mappings.png?raw=true" width="500" height="320" />
+[![mappings](./screenshots/mappings.png?raw=true)](./screenshots/mappings.png)
 
 ### Lists Finder
 
-<img alt="finder" src="./screenshots/finder.png?raw=true" width="500" height="320" />
+[![finder](./screenshots/finder.png?raw=true)](./screenshots/finder.png)
 
 ### Basic Debugging
 
-<img alt="debugging" src="./screenshots/debugging.png?raw=true" width="500" height="320" />
+[![debugging](./screenshots/debugging.png?raw=true)](./screenshots/debugging.png)
 
 ### Diagnostics Indicators
 
-<img alt="indicators" src="./screenshots/indicators.png?raw=true" width="500" height="320" />
+[![indicators](./screenshots/indicators.png?raw=true)](./screenshots/indicators.png)
 
 ### Code Analysis
 
-<img alt="analysis" src="./screenshots/analysis.png?raw=true" width="500" height="320" />
+[![analysis](./screenshots/analysis.png?raw=true)](./screenshots/analysis.png)
 
 ### Auto-completion and Suggestions
 
-<img alt="auto-completion" src="./screenshots/auto-completion.png?raw=true" width="500" height="320" />
+[![auto-completion](./screenshots/auto-completion.png?raw=true)](./screenshots/auto-completion.png)
 
 ### Focus Coding
 
-<img alt="focus" src="./screenshots/focus.png?raw=true" width="500" height="320" />
+[![focus](./screenshots/focus.png?raw=true)](./screenshots/focus.png)
 
 ### Split Windows
 
-<img alt="split" src="./screenshots/split-windows.png?raw=true" width="500" height="320" />
+[![split](./screenshots/split-windows.png?raw=true)](./screenshots/split-windows.png)
 
 ### REST Client
 
-<img alt="rest" src="./screenshots/rest.png?raw=true" width="500" height="320" />
+[![rest](./screenshots/rest.png?raw=true)](./screenshots/rest.png)
 
 ### Themes
 
-<img alt="themes" src="./screenshots/themes.png?raw=true" width="500" height="320" />
+[![themes](./screenshots/themes.png?raw=true)](./screenshots/themes.png)
+
+
 
 ### And much more features ...
 
