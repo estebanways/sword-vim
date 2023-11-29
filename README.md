@@ -66,18 +66,16 @@ The dev is open to suggestions and would iterate based on any constructive feedb
 
 ### Lua PLugins
 
-| Plugin Name                                | Repository Link                                             | Description                                                |
-| -------------------------------------------| ------------------------------------------------------------ | ---------------------------------------------------------- |
-| `akinsho/bufferline.nvim`                   | [GitHub](https://github.com/akinsho/bufferline.nvim)         | Snazzy buffer line with tabpage integration.               |
-| `goolord/alpha-nvim`                        | [GitHub](https://github.com/goolord/alpha-nvim)              | Lua powered greeter like vim-startify/dashboard-nvim.     |
-| `nvim-telescope/telescope.nvim`             | [GitHub](https://github.com/nvim-telescope/telescope.nvim)   | Highly extendable fuzzy finder over lists.                 |
-| `folke/which-key.nvim`                      | [GitHub](https://github.com/folke/which-key.nvim)           | Displays a popup with possible keybindings.               |
-| `L3MON4D3/LuaSnip`                          | [GitHub](https://github.com/L3MON4D3/LuaSnip)               | Powerful and fast snippet engine for Neovim.              |
-| `rafamadriz/friendly-snippets`              | [GitHub](https://github.com/rafamadriz/friendly-snippets)   | Snippets collection for various programming languages.    |
-| `Abstract-IDE/Abstract-cs`                  | [GitHub](https://github.com/Abstract-IDE/Abstract-cs)       | Colorscheme for Neovim with Tree-sitter support.          |
-| `junegunn/vim-easy-align`                   | [GitHub](https://github.com/junegunn/vim-easy-align)        | Easy-to-use Vim alignment.                                 |
-
-[![GitHub](https://img.shields.io/badge/View%20on%20GitHub-000000?style=flat&logo=github)](https://github.com/akinsho/bufferline.nvim)
+| Plugin Name with GitHub Link                       | Description                                      |
+| -------------------------------------------------- | ------------------------------------------------ |
+| [akinsho/bufferline.nvim](https://github.com/akinsho/bufferline.nvim) | Snazzy buffer line with tabpage integration.     |
+| [goolord/alpha-nvim](https://github.com/goolord/alpha-nvim)           | Lua powered greeter like vim-startify/dashboard-nvim. |
+| [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) | Highly extendable fuzzy finder over lists.       |
+| [folke/which-key.nvim](https://github.com/folke/which-key.nvim)       | Displays a popup with possible keybindings.     |
+| [L3MON4D3/LuaSnip](https://github.com/L3MON4D3/LuaSnip)               | Powerful and fast snippet engine for Neovim.    |
+| [rafamadriz/friendly-snippets](https://github.com/rafamadriz/friendly-snippets) | Snippets collection for various programming languages. |
+| [Abstract-IDE/Abstract-cs](https://github.com/Abstract-IDE/Abstract-cs) | Colorscheme for Neovim with Tree-sitter support. |
+| [junegunn/vim-easy-align](https://github.com/junegunn/vim-easy-align) | Easy-to-use Vim alignment.                       |
 
 ## Insights
 
