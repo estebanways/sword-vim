@@ -34,7 +34,7 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 
 ### Multiple Tabs
 
-<img alt="buffers" src="./screenshots/buffers.png?raw=true" width="500" height="320" />
+<img alt="auto-completion" src="./screenshots/auto-completion.png?raw=true" width="500" height="320" />
 
 ### Focus Coding
 
