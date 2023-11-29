@@ -1,6 +1,6 @@
 <div align="center">
 
-# sword-vim
+# sword-vim 🗡️
 
 A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficiency.
 
@@ -18,11 +18,42 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 [Focus Coding](./screenshots/focus.png?raw=true) | [Split Windows](./screenshots/split-windows.png?raw=true) | 
 [REST Client](./screenshots/rest.png?raw=true) | [Themes](./screenshots/themes.png?raw=true)
 
-And much more features ...
+## Installation
 
-The code becomes self-explanatory and easy to understand by utilizing single configuration files. This not only allows for easy customization and swift switching among options, providing flexibility for code adjustments as needed, but also simplifies the development process, and makes it easier for other developers to read and maintain the code. It's a great way to improve the overall quality of your code while saving time and effort.
+1. **Requirements:**
+   - Neovim: Ensure Neovim is installed on your system. You can typically install it using your system's package manager (e.g., `apt`, `brew`, `yum`).
+   - Git: The installation process often involves cloning repositories, so having Git installed is essential.
 
-The dev is open to suggestions and would iterate based on any constructive feedback received.
+2. **Plugin Manager (Optional but recommended):**
+   - Choose a plugin manager. Popular ones include `vim-plug`, `Dein.vim`, and `packer.nvim`.
+   - Follow the installation instructions for your chosen plugin manager.
+
+3. **Configuration:**
+   - Create a Neovim configuration file. The default location is `~/.config/nvim/init.vim` or `~/.vimrc` for Vim compatibility.
+   - Add your chosen plugin manager setup to the configuration file.
+   - Configure basic settings like line numbers, syntax highlighting, etc.
+
+4. **Adding Plugins:**
+   - Use your plugin manager to add plugins to Neovim. Plugins are typically specified in the configuration file.
+   - Example with `vim-plug`:
+     ```vim
+     call plug#begin('~/.vim/plugged')
+     " Add your plugins here
+     Plug 'user/plugin-name'
+     call plug#end()
+     ```
+
+5. **Customization:**
+   - Customize key mappings, colorschemes, and other preferences based on your needs.
+   - Keep in mind that some plugins may require additional configuration.
+
+6. **Adapt to System Configuration:**
+   - Be aware that specific configurations might be needed based on your operating system.
+   - Some plugins might have dependencies that need to be installed separately.
+
+7. **Updates:**
+   - Regularly update your plugins using your plugin manager.
+   - Stay informed about changes in Neovim or your plugins that might affect your configuration.
 
 ## Plugins Included
 
