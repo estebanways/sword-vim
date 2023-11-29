@@ -12,49 +12,27 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 
 ## Screenshots
 
-### Key Mappings
+[Key Mappings](./screenshots/mappings.png?raw=true)
 
-[![mappings](./screenshots/mappings.png?raw=true)](./screenshots/mappings.png)
+[Lists Finder](./screenshots/finder.png?raw=true)
 
-### Lists Finder
+[Basic Debugging](./screenshots/debugging.png?raw=true)
 
-[![finder](./screenshots/finder.png?raw=true)](./screenshots/finder.png)
+[Diagnostics Indicators](./screenshots/indicators.png?raw=true)
 
-### Basic Debugging
+[Code Analysis](./screenshots/analysis.png?raw=true)
 
-[![debugging](./screenshots/debugging.png?raw=true)](./screenshots/debugging.png)
+[Auto-completion and Suggestions](./screenshots/auto-completion.png?raw=true)
 
-### Diagnostics Indicators
+[Focus Coding](./screenshots/focus.png?raw=true)
 
-[![indicators](./screenshots/indicators.png?raw=true)](./screenshots/indicators.png)
+[Split Windows](./screenshots/split-windows.png?raw=true)
 
-### Code Analysis
+[REST Client](./screenshots/rest.png?raw=true)
 
-[![analysis](./screenshots/analysis.png?raw=true)](./screenshots/analysis.png)
+[Themes](./screenshots/themes.png?raw=true)
 
-### Auto-completion and Suggestions
-
-[![auto-completion](./screenshots/auto-completion.png?raw=true)](./screenshots/auto-completion.png)
-
-### Focus Coding
-
-[![focus](./screenshots/focus.png?raw=true)](./screenshots/focus.png)
-
-### Split Windows
-
-[![split](./screenshots/split-windows.png?raw=true)](./screenshots/split-windows.png)
-
-### REST Client
-
-[![rest](./screenshots/rest.png?raw=true)](./screenshots/rest.png)
-
-### Themes
-
-[![themes](./screenshots/themes.png?raw=true)](./screenshots/themes.png)
-
-
-
-### And much more features ...
+And much more features ...
 
 The code becomes self-explanatory and easy to understand by utilizing single configuration files. This not only allows for easy customization and swift switching among options, providing flexibility for code adjustments as needed, but also simplifies the development process, and makes it easier for other developers to read and maintain the code. It's a great way to improve the overall quality of your code while saving time and effort.
 
