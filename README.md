@@ -60,22 +60,18 @@ The dev is open to suggestions and would iterate based on any constructive feedb
 
 ## Plugins
 
-### VimL plugins
 
 
-
-### PLugins
-
-| Lua Plugin                                         | Description                                      |
-| -------------------------------------------------- | ------------------------------------------------ |
-| [akinsho/bufferline.nvim](https://github.com/akinsho/bufferline.nvim) | Snazzy buffer line with tabpage integration.     |
-| [goolord/alpha-nvim](https://github.com/goolord/alpha-nvim)           | Lua powered greeter like vim-startify/dashboard-nvim. |
-| [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) | Highly extendable fuzzy finder over lists.       |
-| [folke/which-key.nvim](https://github.com/folke/which-key.nvim)       | Displays a popup with possible keybindings.     |
-| [L3MON4D3/LuaSnip](https://github.com/L3MON4D3/LuaSnip)               | Powerful and fast snippet engine for Neovim.    |
-| [rafamadriz/friendly-snippets](https://github.com/rafamadriz/friendly-snippets) | Snippets collection for various programming languages. |
-| [Abstract-IDE/Abstract-cs](https://github.com/Abstract-IDE/Abstract-cs) | Colorscheme for Neovim with Tree-sitter support. |
-| [junegunn/vim-easy-align](https://github.com/junegunn/vim-easy-align) | Easy-to-use Vim alignment.                       |
+| Category                              | Lua Plugin                                 | Description                                      |
+| --------------------------------------| ------------------------------------------------------------- | ------------------------------------------------ |
+| Additional Lua Plugins               | [akinsho/bufferline.nvim](https://github.com/akinsho/bufferline.nvim) | Snazzy buffer line with tabpage integration.     |
+| Buffer Line Plugin                    | [goolord/alpha-nvim](https://github.com/goolord/alpha-nvim)   | Lua powered greeter like vim-startify/dashboard-nvim. |
+| Dashboard Plugin                     | [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) | Highly extendable fuzzy finder over lists.       |
+| Fuzzy Finder Plugin                  | [folke/which-key.nvim](https://github.com/folke/which-key.nvim) | Displays a popup with possible keybindings.     |
+| Keybinding Popup Plugin              | [folke/lazy.nvim](https://github.com/folke/lazy.nvim)         | Modern plugin manager for Neovim (commented out in the code). |
+| Lazy Plugin Manager (Commented Out)  | [rafamadriz/friendly-snippets](https://github.com/rafamadriz/friendly-snippets) | Snippets collection for various programming languages. |
+| Snippets Plugins                     | [Abstract-IDE/Abstract-cs](https://github.com/Abstract-IDE/Abstract-cs) | Colorscheme for Neovim with Tree-sitter support. |
+| Abstract-cs Theme                    | [junegunn/vim-easy-align](https://github.com/junegunn/vim-easy-align) | Easy-to-use Vim alignment.                       |
 
 ## Insights
 
