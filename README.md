@@ -64,9 +64,9 @@ The dev is open to suggestions and would iterate based on any constructive feedb
 
 
 
-### Lua PLugins
+### PLugins
 
-| Plugin Name with GitHub Link                       | Description                                      |
+| Lua Plugin                                         | Description                                      |
 | -------------------------------------------------- | ------------------------------------------------ |
 | [akinsho/bufferline.nvim](https://github.com/akinsho/bufferline.nvim) | Snazzy buffer line with tabpage integration.     |
 | [goolord/alpha-nvim](https://github.com/goolord/alpha-nvim)           | Lua powered greeter like vim-startify/dashboard-nvim. |
