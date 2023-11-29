@@ -102,7 +102,7 @@ The dev is open to suggestions and would iterate based on any constructive feedb
 |                               | [kovetskiy/vim-bash](https://github.com/kovetskiy/vim-bash) | Fixes syntax issues with bash files.                        |
 |                               | [rosstimson/bats.vim](https://github.com/rosstimson/bats.vim) | Extends shell highlighting for Bats.                        |
 
-Lua Plugins
+### Lua Plugins
 
 | Category                              | Lua Plugin                                 | Description                                      |
 | --------------------------------------| ------------------------------------------------------------- | ------------------------------------------------ |
