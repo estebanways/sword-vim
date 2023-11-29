@@ -77,6 +77,7 @@ The dev is open to suggestions and would iterate based on any constructive feedb
 | `Abstract-IDE/Abstract-cs`                  | [GitHub](https://github.com/Abstract-IDE/Abstract-cs)       | Colorscheme for Neovim with Tree-sitter support.          |
 | `junegunn/vim-easy-align`                   | [GitHub](https://github.com/junegunn/vim-easy-align)        | Easy-to-use Vim alignment.                                 |
 
+[![GitHub](https://img.shields.io/badge/View%20on%20GitHub-000000?style=flat&logo=github)](https://github.com/akinsho/bufferline.nvim)
 
 ## Insights
 
