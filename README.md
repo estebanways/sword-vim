@@ -24,9 +24,9 @@ The code becomes self-explanatory and easy to understand by utilizing single con
 
 The dev is open to suggestions and would iterate based on any constructive feedback received.
 
-## Plugins
+## Plugins Included
 
-### VimL plugins
+### VimL Plugins
 
 | Category               | VimL Plugin                                                         | Description                                                 |
 | ----------------------------- | ------------------------------------------------------------ | ----------------------------------------------------------- |
