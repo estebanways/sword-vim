@@ -60,7 +60,45 @@ The dev is open to suggestions and would iterate based on any constructive feedb
 
 ## Plugins
 
-
+| Category               | VimL Plugin                                                         | Description                                                 |
+| ----------------------------- | ------------------------------------------------------------ | ----------------------------------------------------------- |
+| Auto-complete Plugins        | [tpope/vim-repeat](https://github.com/tpope/vim-repeat)      | Allows repeating the last command.                          |
+|                               | [github/copilot.vim](https://github.com/github/copilot.vim)  | GitHub's Copilot.                                           |
+|                               | [Exafunction/codeium.vim](https://github.com/Exafunction/codeium.vim) | Codeium.vim.                                                |
+| Snippets Plugins             | [neoclide/coc.nvim](https://github.com/neoclide/coc.nvim)    | Conquer of completion with additional text editing support. |
+|                               | [sirver/ultisnips](https://github.com/sirver/ultisnips)      | Ultimate solution for snippets in Vim.                      |
+|                               | [honza/vim-snippets](https://github.com/honza/vim-snippets)  | Snippets for various languages.                             |
+| Comments Plugins             | [scrooloose/nerdcommenter](https://github.com/scrooloose/nerdcommenter) | Powerful commenting functions.                              |
+|                               | [tpope/vim-commentary](https://github.com/tpope/vim-commentary) | Commenting utility.                                         |
+| Typing Plugins               | [alvan/vim-closetag](https://github.com/alvan/vim-closetag)  | Creates closing HTML tags when typing.                      |
+|                               | [tpope/vim-surround](https://github.com/tpope/vim-surround)  | Manipulates surroundings like parentheses and quotes.        |
+| Finder Plugins               | [junegunn/fzf](https://github.com/junegunn/fzf)              | Fuzzy finder for the terminal.                              |
+| Formatting Plugins           | [mg979/vim-visual-multi](https://github.com/mg979/vim-visual-multi) | Enhances actions like creating multiple cursors.            |
+|                               | [prettier/vim-prettier](https://github.com/prettier/vim-prettier) | Integrates Prettier for supported files.                    |
+| Color Plugins                | [ap/vim-css-color](https://github.com/ap/vim-css-color)      | Provides color highlighting for CSS.                        |
+| Git Plugins                  | [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)  | Git wrapper for Vim.                                        |
+|                               | [itchyny/vim-gitbranch](https://github.com/itchyny/vim-gitbranch) | Provides the name of the git branch.                        |
+| IDE Plugins                  | [mhinz/vim-startify](https://github.com/mhinz/vim-startify)  | Creates a start screen with bookmarks.                      |
+|                               | [easymotion/vim-easymotion](https://github.com/easymotion/vim-easymotion) | Enhances motion in Vim.                                     |
+|                               | [scrooloose/nerdtree](https://github.com/scrooloose/nerdtree) | File system explorer.                                       |
+|                               | [christoomey/vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator) | Integrates navigation between Vim and Tmux.               |
+|                               | [itchyny/lightline.vim](https://github.com/itchyny/lightline.vim) | Status bar for Vim.                                        |
+| DevIcons and Themes          | [ryanoasis/vim-devicons](https://github.com/ryanoasis/vim-devicons) | Adds filetype glyphs.                                       |
+|                               | [morhetz/gruvbox](https://github.com/morhetz/gruvbox)        | Gruvbox theme.                                              |
+|                               | [shinchu/lightline-gruvbox.vim](https://github.com/shinchu/lightline-gruvbox.vim) | Lightline theme for Gruvbox.                               |
+|                               | [mhartington/oceanic-next](https://github.com/mhartington/oceanic-next) | OceanicNext theme.                                          |
+|                               | [Mofiqul/dracula.nvim](https://github.com/Mofiqul/dracula.nvim) | Dracula theme.                                              |
+| Other Productivity Plugins   | [tribela/vim-transparent](https://github.com/tribela/vim-transparent) | Adds transparency to Vim.                                   |
+|                               | [wakatime/vim-wakatime](https://github.com/wakatime/vim-wakatime) | Tracks coding activity.                                     |
+|                               | [benmills/vimux](https://github.com/benmills/vimux)        | Tmux integration.                                           |
+|                               | [itspriddle/vim-shellcheck](https://github.com/itspriddle/vim-shellcheck) | Finds errors in bash/sh scripts.                            |
+|                               | [tyewang/vimux-jest-test](https://github.com/tyewang/vimux-jest-test) | Jest test integration.                                     |
+|                               | [janko-m/vim-test](https://github.com/janko-m/vim-test)    | Test runner for Vim.                                       |
+|                               | [diepm/vim-rest-console](https://github.com/diepm/vim-rest-console) | REST console for sending requests and displaying responses. |
+| Syntax Plugins               | [sheerun/vim-polyglot](https://github.com/sheerun/vim-polyglot) | Language pack for various languages.                        |
+|                               | [styled-components/vim-styled-components](https://github.com/styled-components/vim-styled-components) | Styled Components syntax highlighting.                   |
+|                               | [kovetskiy/vim-bash](https://github.com/kovetskiy/vim-bash) | Fixes syntax issues with bash files.                        |
+|                               | [rosstimson/bats.vim](https://github.com/rosstimson/bats.vim) | Extends shell highlighting for Bats.                        |
 
 | Category                              | Lua Plugin                                 | Description                                      |
 | --------------------------------------| ------------------------------------------------------------- | ------------------------------------------------ |
