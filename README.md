@@ -12,16 +12,62 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 
 ## Screenshots
 
-[Key Mappings](./screenshots/mappings.png?raw=true) | [Lists Finder](./screenshots/finder.png?raw=true) | 
-[Basic Debugging](./screenshots/debugging.png?raw=true) | [Diagnostics Indicators](./screenshots/indicators.png?raw=true) | 
-[Code Analysis](./screenshots/analysis.png?raw=true) | [Auto-completion and Suggestions](./screenshots/auto-completion.png?raw=true) | 
-[Focus Coding](./screenshots/focus.png?raw=true) | [Split Windows](./screenshots/split-windows.png?raw=true) | 
-[REST Client](./screenshots/rest.png?raw=true) | [Themes](./screenshots/themes.png?raw=true)
+[Key Mappings](./screenshots/mappings.png?raw=true) 📷 [Lists Finder](./screenshots/finder.png?raw=true) 📷 
+[Basic Debugging](./screenshots/debugging.png?raw=true) 📷 [Diagnostics Indicators](./screenshots/indicators.png?raw=true) 📷 
+[Code Analysis](./screenshots/analysis.png?raw=true) 📷 [Auto-completion and Suggestions](./screenshots/auto-completion.png?raw=true) 📷 
+[Focus Coding](./screenshots/focus.png?raw=true) 📷 [Split Windows](./screenshots/split-windows.png?raw=true) 📷 
+[REST Client](./screenshots/rest.png?raw=true) 📷 [Themes](./screenshots/themes.png?raw=true)
+
+## Prerequisites
+
+**Note:** The following list includes tools that may enhance the user experience but are not strictly prerequisites. Depending on your specific use case and preferences, you may choose to install some or all of these tools for improved functionality and convenience.
+
+| GNU/Linux                 | MacOS                         | Description                                                                 |
+| --- | --- | --- |
+| autoconf                  | autoconf                      | Configuration script system for software.                                    |
+| automake                  | automake                      | Tool for automatically generating Makefile.in files.                         |
+| bash-language-server      | bash-language-server          | Language Server Protocol for Bash.                                           |
+| bat                       | bat                           | A cat clone with syntax highlighting and Git integration.                    |
+| bats                      | bats                          | Bash Automated Testing System.                                               |
+| cmake                     | cmake                         | Cross-platform makefile generator.                                           |
+| curl                      | curl                          | Command-line tool for transferring data with URL syntax.                     |
+| doxygen                   | doxygen                       | Documentation system for C++, C, Java, Objective-C, and more.                |
+| feh                       | feh                           | Fast and lightweight image viewer.                                           |
+| figlet                    | figlet                        | Program for making large letters out of ordinary text.                       |
+| flake8                    | flake8                        | Tool for style guide enforcement in Python.                                  |
+| fzf                       | fzf                           | Fuzzy finder for the command-line.                                           |
+| g++                       | g++                           | GNU Compiler Collection - C++ compiler.                                      |
+| gettext                   | gettext                       | Tools for internationalization (i18n) and localization (l10n).               |
+| jq                        | jq                            | Parsers and manipulates JSON data.                                           |
+| libtool                   | libtool                       | Generic library support script.                                              |
+| *libtool-bin*             | *libtool*                     | (See libtool).                                                               |
+| *ninja-build*             | *ninja*                       | Ninja build system.                                                          |
+| node.js LTS               | node.js LTS                   | JavaScript runtime built on Chrome's V8 JavaScript engine.                   |
+| npm                       | npm                           | Package manager for JavaScript.                                              |
+| NVM                       | NVM                           | Node Version Manager for managing multiple Node.js versions.                 |
+| Oh my Tmux!               | Oh my Tmux!                   | Tmux configuration framework.                                                |
+| Oh my Zsh!                | Oh my Zsh!                    | Zsh configuration framework.                                                 |
+| pip                       | pip                           | Package installer for Python.                                                |
+| pip3                      | pip3                          | Package installer for Python 3.                                              |
+| pkg-config                | pkg-config                    | System for managing library compile and link flags.                          |
+| pynvim                    | pynvim                        | Python client for Neovim.                                                    |
+| qiv                       | qiv                           | Quick Image Viewer.                                                          |
+| ripgrep                   | ripgrep                       | Line-oriented search tool that recursively searches your current directory.  |
+| ristretto                 | ristretto                     | Lightweight and fast image viewer for the Xfce desktop environment.          |
+| shellcheck                | shellcheck                    | Shell script analysis tool.                                                  |
+| s-tui                     | s-tui                         | Terminal UI for monitoring your computer's CPU temperature and more.         |
+| sxiv                      | sxiv                          | Simple X Image Viewer.                                                       |
+| tidy                      | tidy                          | HTML and XML syntax checker and validator.                                   |
+| unzip                     | unzip                         | Extraction utility for archives compressed in .zip format.                   |
+| wl-clipboard              | wl-clipboard                  | Wayland clipboard utilities.                                                 |
+| xclip                     | xclip                         | Command line interface to X selections (clipboard).                          |
+| WezTerm                   | WezTerm                       | GPU-accelerated cross-platform terminal emulator.                            |
+| *Gnome Terminal*          | *iTerm2*                      | Terminal emulator.                                                           |
 
 ## Installation
 
 1. **Requirements:**
-   - Neovim: Ensure Neovim is installed on your system. You can typically install it using your system's package manager (e.g., `apt`, `brew`, `yum`).
+   - Neovim: Ensure Neovim is installed on your system. You can typically install it using your system's package manager (e.g., `apt`, `brew`, `yum`). You can also build it from source for your specific OS.
    - Git: The installation process often involves cloning repositories, so having Git installed is essential.
 
 2. **Plugin Manager (Optional but recommended):**
@@ -30,6 +76,22 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 
 3. **Configuration:**
    - Create a Neovim configuration file. The default location is `~/.config/nvim/init.vim` or `~/.vimrc` for Vim compatibility.
+     Add the next lines to the file `init.vim`:
+     ```vim
+     " ------------------------------------------------------------------------------
+     " Sets the runtimepath for Vim plugins and runtime files
+     " ------------------------------------------------------------------------------
+     " Adds ~/.vim to the start of runtimepath
+     " Appends ~/.vim/after to runtimepath
+     " Sets the packpath to match the runtimepath
+     " Sources the user's Vim configuration file
+     " ------------------------------------------------------------------------------
+     set runtimepath^=~/.vim runtimepath+=~/.vim/after
+     let &packpath=&runtimepath
+     source ~/.vimrc
+     ```
+     - Create a symbolic link from ~/.vimrc to ~/config/.vimrc
+     - Create a symbolic link from ~/.vim to ~/config/.vim
    - Add your chosen plugin manager setup to the configuration file.
    - Configure basic settings like line numbers, syntax highlighting, etc.
 
@@ -59,58 +121,58 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 
 ### VimL Plugins
 
-| Category               | VimL Plugin                                                         | Description                                                 |
-| ----------------------------- | ------------------------------------------------------------ | ----------------------------------------------------------- |
-| Auto-complete Plugins        | [tpope/vim-repeat](https://github.com/tpope/vim-repeat)      | Allows repeating the last command.                          |
-|                               | [github/copilot.vim](https://github.com/github/copilot.vim)  | GitHub's Copilot.                                           |
-|                               | [Exafunction/codeium.vim](https://github.com/Exafunction/codeium.vim) | Codeium.vim.                                                |
-| Snippets Plugins             | [neoclide/coc.nvim](https://github.com/neoclide/coc.nvim)    | Conquer of completion with additional text editing support. |
-|                               | [sirver/ultisnips](https://github.com/sirver/ultisnips)      | Ultimate solution for snippets in Vim.                      |
-|                               | [honza/vim-snippets](https://github.com/honza/vim-snippets)  | Snippets for various languages.                             |
-| Comments Plugins             | [scrooloose/nerdcommenter](https://github.com/scrooloose/nerdcommenter) | Powerful commenting functions.                              |
-|                               | [tpope/vim-commentary](https://github.com/tpope/vim-commentary) | Commenting utility.                                         |
-| Typing Plugins               | [alvan/vim-closetag](https://github.com/alvan/vim-closetag)  | Creates closing HTML tags when typing.                      |
-|                               | [tpope/vim-surround](https://github.com/tpope/vim-surround)  | Manipulates surroundings like parentheses and quotes.        |
-| Finder Plugins               | [junegunn/fzf](https://github.com/junegunn/fzf)              | Fuzzy finder for the terminal.                              |
-| Formatting Plugins           | [mg979/vim-visual-multi](https://github.com/mg979/vim-visual-multi) | Enhances actions like creating multiple cursors.            |
-|                               | [prettier/vim-prettier](https://github.com/prettier/vim-prettier) | Integrates Prettier for supported files.                    |
-| Color Plugins                | [ap/vim-css-color](https://github.com/ap/vim-css-color)      | Provides color highlighting for CSS.                        |
-| Git Plugins                  | [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)  | Git wrapper for Vim.                                        |
-|                               | [itchyny/vim-gitbranch](https://github.com/itchyny/vim-gitbranch) | Provides the name of the git branch.                        |
-| IDE Plugins                  | [mhinz/vim-startify](https://github.com/mhinz/vim-startify)  | Creates a start screen with bookmarks.                      |
-|                               | [easymotion/vim-easymotion](https://github.com/easymotion/vim-easymotion) | Enhances motion in Vim.                                     |
-|                               | [scrooloose/nerdtree](https://github.com/scrooloose/nerdtree) | File system explorer.                                       |
-|                               | [christoomey/vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator) | Integrates navigation between Vim and Tmux.               |
-|                               | [itchyny/lightline.vim](https://github.com/itchyny/lightline.vim) | Status bar for Vim.                                        |
-| DevIcons and Themes          | [ryanoasis/vim-devicons](https://github.com/ryanoasis/vim-devicons) | Adds filetype glyphs.                                       |
-|                               | [morhetz/gruvbox](https://github.com/morhetz/gruvbox)        | Gruvbox theme.                                              |
-|                               | [shinchu/lightline-gruvbox.vim](https://github.com/shinchu/lightline-gruvbox.vim) | Lightline theme for Gruvbox.                               |
-|                               | [mhartington/oceanic-next](https://github.com/mhartington/oceanic-next) | OceanicNext theme.                                          |
-|                               | [Mofiqul/dracula.nvim](https://github.com/Mofiqul/dracula.nvim) | Dracula theme.                                              |
-| Other Productivity Plugins   | [tribela/vim-transparent](https://github.com/tribela/vim-transparent) | Adds transparency to Vim.                                   |
-|                               | [wakatime/vim-wakatime](https://github.com/wakatime/vim-wakatime) | Tracks coding activity.                                     |
-|                               | [benmills/vimux](https://github.com/benmills/vimux)        | Tmux integration.                                           |
-|                               | [itspriddle/vim-shellcheck](https://github.com/itspriddle/vim-shellcheck) | Finds errors in bash/sh scripts.                            |
-|                               | [tyewang/vimux-jest-test](https://github.com/tyewang/vimux-jest-test) | Jest test integration.                                     |
-|                               | [janko-m/vim-test](https://github.com/janko-m/vim-test)    | Test runner for Vim.                                       |
-|                               | [diepm/vim-rest-console](https://github.com/diepm/vim-rest-console) | REST console for sending requests and displaying responses. |
-| Syntax Plugins               | [sheerun/vim-polyglot](https://github.com/sheerun/vim-polyglot) | Language pack for various languages.                        |
-|                               | [styled-components/vim-styled-components](https://github.com/styled-components/vim-styled-components) | Styled Components syntax highlighting.                   |
-|                               | [kovetskiy/vim-bash](https://github.com/kovetskiy/vim-bash) | Fixes syntax issues with bash files.                        |
-|                               | [rosstimson/bats.vim](https://github.com/rosstimson/bats.vim) | Extends shell highlighting for Bats.                        |
+| Category                     | VimL Plugin                                                                 | Description                                                 |
+| --- | --- | --- |
+| Auto-complete Plugins        | [tpope/vim-repeat](https://github.com/tpope/vim-repeat)                     | Allows repeating the last command.                          |
+|                              | [github/copilot.vim](https://github.com/github/copilot.vim)                 | GitHub's Copilot.                                           |
+|                              | [Exafunction/codeium.vim](https://github.com/Exafunction/codeium.vim)       | Codeium.vim.                                                |
+| Snippets Plugins             | [neoclide/coc.nvim](https://github.com/neoclide/coc.nvim)                   | Conquer of completion with additional text editing support. |
+|                              | [sirver/ultisnips](https://github.com/sirver/ultisnips)                     | Ultimate solution for snippets in Vim.                      |
+|                              | [honza/vim-snippets](https://github.com/honza/vim-snippets)                 | Snippets for various languages.                             |
+| Comments Plugins             | [scrooloose/nerdcommenter](https://github.com/scrooloose/nerdcommenter)     | Powerful commenting functions.                              |
+|                              | [tpope/vim-commentary](https://github.com/tpope/vim-commentary)             | Commenting utility.                                         |
+| Typing Plugins               | [alvan/vim-closetag](https://github.com/alvan/vim-closetag)                 | Creates closing HTML tags when typing.                      |
+|                              | [tpope/vim-surround](https://github.com/tpope/vim-surround)                 | Manipulates surroundings like parentheses and quotes.       |
+| Finder Plugins               | [junegunn/fzf](https://github.com/junegunn/fzf)                             | Fuzzy finder for the terminal.                              |
+| Formatting Plugins           | [mg979/vim-visual-multi](https://github.com/mg979/vim-visual-multi)         | Enhances actions like creating multiple cursors.            |
+|                              | [prettier/vim-prettier](https://github.com/prettier/vim-prettier)           | Integrates Prettier for supported files.                    |
+| Color Plugins                | [ap/vim-css-color](https://github.com/ap/vim-css-color)                     | Provides color highlighting for CSS.                        |
+| Git Plugins                  | [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)                 | Git wrapper for Vim.                                        |
+|                              | [itchyny/vim-gitbranch](https://github.com/itchyny/vim-gitbranch)           | Provides the name of the git branch.                        |
+| IDE Plugins                  | [mhinz/vim-startify](https://github.com/mhinz/vim-startify)                 | Creates a start screen with bookmarks.                      |
+|                              | [easymotion/vim-easymotion]( https://github.com/easymotion/vim-easymotion)  | Enhances motion in Vim.                                     |
+|                              | [scrooloose/nerdtree](https://github.com/scrooloose/nerdtree)               | File system explorer.                                       |
+|                              | [christoomey/vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator) | Integrates navigation between Vim and Tmux.         |
+|                              | [itchyny/lightline.vim](https://github.com/itchyny/lightline.vim)           | Status bar for Vim.                                         |
+| DevIcons and Themes          | [ryanoasis/vim-devicons](https://github.com/ryanoasis/vim-devicons)         | Adds filetype glyphs.                                       |
+|                              | [morhetz/gruvbox](https://github.com/morhetz/gruvbox)                       | Gruvbox theme.                                              |
+|                              | [shinchu/lightline-gruvbox.vim](https://github.com/shinchu/lightline-gruvbox.vim) | Lightline theme for Gruvbox.                          |
+|                              | [mhartington/oceanic-next](https://github.com/mhartington/oceanic-next)     | OceanicNext theme.                                          |
+|                              | [Mofiqul/dracula.nvim](https://github.com/Mofiqul/dracula.nvim)             | Dracula theme.                                              |
+| Other Productivity Plugins   | [tribela/vim-transparent](https://github.com/tribela/vim-transparent)       | Adds transparency to Vim.                                   |
+|                              | [wakatime/vim-wakatime](https://github.com/wakatime/vim-wakatime)           | Tracks coding activity.                                     |
+|                              | [benmills/vimux](https://github.com/benmills/vimux)                         | Tmux integration.                                           |
+|                              | [itspriddle/vim-shellcheck](https://github.com/itspriddle/vim-shellcheck)   | Finds errors in bash/sh scripts.                            |
+|                              | [tyewang/vimux-jest-test](https://github.com/tyewang/vimux-jest-test)       | Jest test integration.                                      |
+|                              | [janko-m/vim-test](https://github.com/janko-m/vim-test)                     | Test runner for Vim.                                        |
+|                              | [diepm/vim-rest-console](https://github.com/diepm/vim-rest-console)         | REST console for sending requests and displaying responses. |
+| Syntax Plugins               | [sheerun/vim-polyglot](https://github.com/sheerun/vim-polyglot)             | Language pack for various languages.                        |
+|                              | [styled-components/vim-styled-components](https://github.com/styled-components/vim-styled-components) | Styled Components syntax highlighting. |
+|                              | [kovetskiy/vim-bash](https://github.com/kovetskiy/vim-bash)                 | Fixes syntax issues with bash files.                        |
+|                              | [rosstimson/bats.vim](https://github.com/rosstimson/bats.vim)               | Extends shell highlighting for Bats.                        |
 
 ### Lua Plugins
 
-| Category                              | Lua Plugin                                 | Description                                      |
-| --------------------------------------| ------------------------------------------------------------- | ------------------------------------------------ |
-| Additional Lua Plugins               | [akinsho/bufferline.nvim](https://github.com/akinsho/bufferline.nvim) | Snazzy buffer line with tabpage integration.     |
-| Buffer Line Plugin                    | [goolord/alpha-nvim](https://github.com/goolord/alpha-nvim)   | Lua powered greeter like vim-startify/dashboard-nvim. |
-| Dashboard Plugin                     | [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) | Highly extendable fuzzy finder over lists.       |
-| Fuzzy Finder Plugin                  | [folke/which-key.nvim](https://github.com/folke/which-key.nvim) | Displays a popup with possible keybindings.     |
-| Keybinding Popup Plugin              | [folke/lazy.nvim](https://github.com/folke/lazy.nvim)         | Modern plugin manager for Neovim (commented out in the code). |
-| Lazy Plugin Manager (Commented Out)  | [rafamadriz/friendly-snippets](https://github.com/rafamadriz/friendly-snippets) | Snippets collection for various programming languages. |
-| Snippets Plugins                     | [Abstract-IDE/Abstract-cs](https://github.com/Abstract-IDE/Abstract-cs) | Colorscheme for Neovim with Tree-sitter support. |
-| Abstract-cs Theme                    | [junegunn/vim-easy-align](https://github.com/junegunn/vim-easy-align) | Easy-to-use Vim alignment.                       |
+| Category                     | Lua Plugin                                                                  | Description                                                 |
+| --- | --- | --- |
+| Buffer Line Plugin           | [akinsho/bufferline.nvim](https://github.com/akinsho/bufferline.nvim)       | Snazzy buffer line with tabpage integration.                |
+| Dashboard Plugin             | [goolord/alpha-nvim](https://github.com/goolord/alpha-nvim)                 | Lua powered greeter like vim-startify/dashboard-nvim.       |
+| Fuzzy Finder Plugin          | [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) | Highly extendable fuzzy finder over lists.            |
+| Keybinding Popup Plugin      | [folke/which-key.nvim](https://github.com/folke/which-key.nvim)             | Displays a popup with possible keybindings.                 |
+| Lazy Plugin Manager          | [folke/lazy.nvim](https://github.com/folke/lazy.nvim)                     | Modern plugin manager for Neovim (commented out in the code). |
+| Snippets Plugins             | [rafamadriz/friendly-snippets](https://github.com/rafamadriz/friendly-snippets) | Snippets collection for various programming languages.  |
+| Abstract-cs Theme            | [Abstract-IDE/Abstract-cs](https://github.com/Abstract-IDE/Abstract-cs)     | Colorscheme for Neovim with Tree-sitter support.            |
+| Alignment                    | [junegunn/vim-easy-align](https://github.com/junegunn/vim-easy-align)       | Easy-to-use Vim alignment.                                  |
 
 ## Insights
 
