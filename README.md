@@ -22,7 +22,7 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 
 **Note:** The following list includes tools that may enhance the user experience but are not strictly prerequisites. Depending on your specific use case and preferences, you may choose to install some or all of these tools for improved functionality and convenience.
 
-| GNU/Linux                 | MacOS                         | Description                                                                 |
+| GNU/Linux                 | MacOS                         | Description                                                                  |
 | --- | --- | --- |
 | autoconf                  | autoconf                      | Configuration script system for software.                                    |
 | automake                  | automake                      | Tool for automatically generating Makefile.in files.                         |
@@ -91,10 +91,23 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
      let &packpath=&runtimepath
      source ~/.vimrc
      ```
-     - Create a symbolic link from ~/.vimrc to ~/config/.vimrc
-     - Create a symbolic link from ~/.vim to ~/config/.vim
+     - Create a symbolic link from the file `~/.vimrc` to the same file in `~/config/.vimrc`, where config is copy of the directory `sword-vim/config`.
+       ```shell
+       ln -s config/.vimrc ~/.vimrc
+       ```
+     - Create a symbolic link from the directory `~/.vim` to the same directory in `~/config`, `~/config/.vim`.
+       ```shell
+       ln -s config/.vim/ ~/.vim/
+       ```
    - Add your chosen plugin manager setup to the configuration file.
+   - Install the sword-vim plugins. For Packet, say no (N) to avoid Packet removing itself.
+     ```vim
+     :PlugInstall
+     :PacketInstall
+     ```
    - Configure basic settings like line numbers, syntax highlighting, etc.
+   - Source or restart Neovim.
+   - Voila! Enjoy it!
 
 4. **Adding Plugins:**
    - Use your plugin manager to add plugins to Neovim. Plugins are typically specified in the configuration file.
