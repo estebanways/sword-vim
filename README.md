@@ -38,6 +38,7 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 | fzf                       | fzf                           | Fuzzy finder for the command-line.                                           |
 | g++                       | g++                           | GNU Compiler Collection - C++ compiler.                                      |
 | gettext                   | gettext                       | Tools for internationalization (i18n) and localization (l10n).               |
+| *Gnome Terminal*          | *iTerm2*                      | Terminal emulator.                                                           |
 | jq                        | jq                            | Parsers and manipulates JSON data.                                           |
 | libtool                   | libtool                       | Generic library support script.                                              |
 | *libtool-bin*             | *libtool*                     | (See libtool).                                                               |
@@ -59,10 +60,10 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 | sxiv                      | sxiv                          | Simple X Image Viewer.                                                       |
 | tidy                      | tidy                          | HTML and XML syntax checker and validator.                                   |
 | unzip                     | unzip                         | Extraction utility for archives compressed in .zip format.                   |
+| WezTerm                   | WezTerm                       | GPU-accelerated cross-platform terminal emulator.                            |
 | wl-clipboard              | wl-clipboard                  | Wayland clipboard utilities.                                                 |
 | xclip                     | xclip                         | Command line interface to X selections (clipboard).                          |
-| WezTerm                   | WezTerm                       | GPU-accelerated cross-platform terminal emulator.                            |
-| *Gnome Terminal*          | *iTerm2*                      | Terminal emulator.                                                           |
+| yarn                      | yarn                          | Alternative to NPM                                                           |
 
 ## Installation
 
