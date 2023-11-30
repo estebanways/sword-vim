@@ -63,7 +63,7 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 | WezTerm                   | WezTerm                       | GPU-accelerated cross-platform terminal emulator.                            |
 | wl-clipboard              | wl-clipboard                  | Wayland clipboard utilities.                                                 |
 | xclip                     | xclip                         | Command line interface to X selections (clipboard).                          |
-| yarn                      | yarn                          | Alternative to NPM                                                           |
+| yarn                      | yarn                          | Alternative to NPM.                                                          |
 
 ## Installation
 
