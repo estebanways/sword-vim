@@ -91,13 +91,13 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
      let &packpath=&runtimepath
      source ~/.vimrc
      ```
-     - Create a symbolic link from the file `~/.vimrc` to the same file in `~/config/.vimrc`, where config is copy of the directory `sword-vim/config`.
+     - Create a symbolic link from the file `~/.vimrc` to the same file in `~/config/.vimrc`, where *config* is copy of the directory `sword-vim/config`, for example:
        ```shell
-       ln -s config/.vimrc ~/.vimrc
+       ln -s ~/config/.vimrc ~/.vimrc
        ```
      - Create a symbolic link from the directory `~/.vim` to the same directory in `~/config`, `~/config/.vim`.
        ```shell
-       ln -s config/.vim/ ~/.vim/
+       ln -s ~/config/.vim/ ~/.vim/
        ```
    - Add your chosen plugin manager setup to the configuration file.
    - Install the sword-vim plugins. For Packet, say no (N) to avoid Packet removing itself.
