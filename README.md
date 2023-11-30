@@ -1,6 +1,6 @@
 <div align="center">
 
-# sword-vim 🗡️
+# Sword Vim 🗡️
 
 A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficiency.
 
@@ -73,7 +73,7 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 
 2. **Plugin Manager (Optional but recommended):**
    - Choose a plugin manager. Popular ones include `vim-plug`, `Dein.vim`, and `packer.nvim`.
-   - Follow the installation instructions for your chosen plugin manager.
+   - Follow the installation instructions for your chosen plugin manager. The default configuration of Sword Vim requires `vim-plug` and `packer.nvim`.
 
 3. **Configuration:**
    - Create a Neovim configuration file. The default location is `~/.config/nvim/init.vim` or `~/.vimrc` for Vim compatibility.
@@ -99,8 +99,8 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
        ```shell
        ln -s ~/config/.vim/ ~/.vim/
        ```
-   - Add your chosen plugin manager setup to the configuration file.
-   - Install the sword-vim plugins. For Packet, say no (N) to avoid Packet removing itself.
+   - Add your chosen plugin manager setup to the configuration file. Sword Vim defaults, `vim-plug` and `packet.nvim` are already set up.
+   - Install the Sword Vim plugins. For Packet, say no (N) to avoid Packet removing itself.
      ```vim
      :PlugInstall
      :PacketInstall
@@ -110,7 +110,7 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
    - Voila! Enjoy it!
 
 4. **Adding Plugins:**
-   - Use your plugin manager to add plugins to Neovim. Plugins are typically specified in the configuration file.
+   - Use your plugin manager to add plugins to Neovim. Plugins are typically specified in the configuration file. Sword Vim has two default configuration files, one for Vim Script, one for Lua.
    - Example with `vim-plug`:
      ```vim
      call plug#begin('~/.vim/plugged')
@@ -203,6 +203,6 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 
 ## License
 
-sword-vim is [MIT Licensed](./LICENSE).
+Sword Vim is [MIT Licensed](./LICENSE).
 
 [estebanways]: https://github.com/estebanways
