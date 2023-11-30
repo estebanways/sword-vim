@@ -99,11 +99,11 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
        ```shell
        ln -s ~/config/.vim/ ~/.vim/
        ```
-   - Add your chosen plugin manager setup to the configuration file. Sword Vim defaults, `vim-plug` and `packet.nvim` are already set up.
-   - Install the Sword Vim plugins. For Packet, say no (N) to avoid Packet removing itself.
+   - Add your chosen plugin manager setup to the configuration file. Sword Vim defaults `vim-plug` and `packer.nvim`, are already set up.
+   - Install the Sword Vim plugins. For Packer, say no (N) to avoid Packer removing itself.
      ```vim
      :PlugInstall
-     :PacketInstall
+     :PackerInstall
      ```
    - Configure basic settings like line numbers, syntax highlighting, etc.
    - Source or restart Neovim.
