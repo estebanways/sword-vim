@@ -91,7 +91,7 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
      let &packpath=&runtimepath
      source ~/.vimrc
      ```
-     - Create a symbolic link from the file `~/.vimrc` to the same file in `~/config/.vimrc`, where *config* is copy of the directory `sword-vim/config`, for example:
+     - Create a symbolic link from the file `~/.vimrc` to the same file in `~/config/.vimrc`, where *config* is copy of the directory `sword-vim/config`.
        ```shell
        ln -s ~/config/.vimrc ~/.vimrc
        ```
