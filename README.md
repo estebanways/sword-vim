@@ -22,7 +22,7 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 
 **Note:** The following list includes tools that may enhance the user experience but are not strictly prerequisites. Depending on your specific use case and preferences, you may choose to install some or all of these tools for improved functionality and convenience.
 
-### Neovim build from source
+### Neovim Build From Source
 
 | GNU/Linux                 | MacOS                         | Description                                                                  |
 | --- | --- | --- |
@@ -66,7 +66,7 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 | shellcheck                | shellcheck                    | Shell script analysis tool.                                                  |
 | WezTerm                   |  iTerm2 / WezTerm             | Terminals with ligatures and transparency support                            |
 
-### External tools
+### External Tools
 
 | GNU/Linux                 | MacOS                         | Description                                                                  |
 | --- | --- | --- |
