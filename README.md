@@ -22,48 +22,65 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 
 **Note:** The following list includes tools that may enhance the user experience but are not strictly prerequisites. Depending on your specific use case and preferences, you may choose to install some or all of these tools for improved functionality and convenience.
 
+### Neovim build from source
+
 | GNU/Linux                 | MacOS                         | Description                                                                  |
 | --- | --- | --- |
 | autoconf                  | autoconf                      | Configuration script system for software.                                    |
 | automake                  | automake                      | Tool for automatically generating Makefile.in files.                         |
-| bash-language-server      | bash-language-server          | Language Server Protocol for Bash.                                           |
-| bat                       | bat                           | A cat clone with syntax highlighting and Git integration.                    |
-| bats                      | bats                          | Bash Automated Testing System.                                               |
 | cmake                     | cmake                         | Cross-platform makefile generator.                                           |
-| curl                      | curl                          | Command-line tool for transferring data with URL syntax.                     |
-| doxygen                   | doxygen                       | Documentation system for C++, C, Java, Objective-C, and more.                |
-| feh                       | feh                           | Fast and lightweight image viewer.                                           |
-| figlet                    | figlet                        | Program for making large letters out of ordinary text.                       |
-| flake8                    | flake8                        | Tool for style guide enforcement in Python.                                  |
-| fzf                       | fzf                           | Fuzzy finder for the command-line.                                           |
+| curl                      | curl                          | A command-line tool and library for transferring data with URLs.             |
 | g++                       | g++                           | GNU Compiler Collection - C++ compiler.                                      |
 | gettext                   | gettext                       | Tools for internationalization (i18n) and localization (l10n).               |
-| *Gnome Terminal*          | *iTerm2*                      | Terminal emulator.                                                           |
-| jq                        | jq                            | Parsers and manipulates JSON data.                                           |
 | libtool                   | libtool                       | Generic library support script.                                              |
 | *libtool-bin*             | *libtool*                     | (See libtool).                                                               |
 | *ninja-build*             | *ninja*                       | Ninja build system.                                                          |
+| pkg-config                | pkg-config                    | System for managing library compile and link flags.                          |
+| s-tui                     | s-tui                         | Terminal UI for monitoring your computer's CPU temperature and more.         |
+| unzip                     | unzip                         | Extraction utility for archives compressed in .zip format.                   |
+| doxygen                   | doxygen                       | Documentation system for C++, C, Java, Objective-C, and more.                |
+
+### Sword Vim
+
+| GNU/Linux                 | MacOS                         | Description                                                                  |
+| --- | --- | --- |
+| bash-language-server      | bash-language-server          | Language Server Protocol for Bash.                                           |
+| figlet                    | figlet                        | Program for making large letters out of ordinary text.                       |
 | node.js LTS               | node.js LTS                   | JavaScript runtime built on Chrome's V8 JavaScript engine.                   |
 | npm                       | npm                           | Package manager for JavaScript.                                              |
-| NVM                       | NVM                           | Node Version Manager for managing multiple Node.js versions.                 |
 | Oh my Tmux!               | Oh my Tmux!                   | Tmux configuration framework.                                                |
-| Oh my Zsh!                | Oh my Zsh!                    | Zsh configuration framework.                                                 |
 | pip                       | pip                           | Package installer for Python.                                                |
 | pip3                      | pip3                          | Package installer for Python 3.                                              |
-| pkg-config                | pkg-config                    | System for managing library compile and link flags.                          |
 | pynvim                    | pynvim                        | Python client for Neovim.                                                    |
-| qiv                       | qiv                           | Quick Image Viewer.                                                          |
-| ripgrep                   | ripgrep                       | Line-oriented search tool that recursively searches your current directory.  |
-| ristretto                 | ristretto                     | Lightweight and fast image viewer for the Xfce desktop environment.          |
-| shellcheck                | shellcheck                    | Shell script analysis tool.                                                  |
-| s-tui                     | s-tui                         | Terminal UI for monitoring your computer's CPU temperature and more.         |
-| sxiv                      | sxiv                          | Simple X Image Viewer.                                                       |
-| tidy                      | tidy                          | HTML and XML syntax checker and validator.                                   |
-| unzip                     | unzip                         | Extraction utility for archives compressed in .zip format.                   |
-| WezTerm                   | WezTerm                       | GPU-accelerated cross-platform terminal emulator.                            |
 | wl-clipboard              | wl-clipboard                  | Wayland clipboard utilities.                                                 |
 | xclip                     | xclip                         | Command line interface to X selections (clipboard).                          |
 | yarn                      | yarn                          | Alternative to NPM.                                                          |
+
+### Languages
+
+| GNU/Linux                 | MacOS                         | Description                                                                  |
+| --- | --- | --- |
+| bats                      | bats                          | Bash Automated Testing System.                                               |
+| flake8                    | flake8                        | Tool for style guide enforcement in Python.                                  |
+| NVM                       | NVM                           | Node Version Manager for managing multiple Node.js versions.                 |
+| shellcheck                | shellcheck                    | Shell script analysis tool.                                                  |
+| WezTerm                   |  iTerm2 / WezTerm             | GPU-accelerated cross-platform terminal emulator.                            |
+
+### External tools
+
+| GNU/Linux                 | MacOS                         | Description                                                                  |
+| --- | --- | --- |
+| bat                       | bat                           | A cat clone with syntax highlighting and Git integration.                    |
+| feh                       | feh                           | Fast and lightweight image viewer.                                           |
+| fzf                       | fzf                           | Fuzzy finder for the command-line.                                           |
+| jq                        | jq                            | Parsers and manipulates JSON data.                                           |
+| Oh my Zsh!                | Oh my Zsh!                    | Zsh configuration framework.                                                 |
+| qiv                       | qiv                           | Quick Image Viewer.                                                          |
+| ripgrep                   | ripgrep                       | Line-oriented search tool that recursively searches your current directory.  |
+| ristretto                 | ristretto                     | Lightweight and fast image viewer for the Xfce desktop environment.          |
+| sxiv                      | sxiv                          | Simple X Image Viewer.                                                       |
+| tidy                      | tidy                          | HTML and XML syntax checker and validator.                                   |
+| zplug                     | zplug                         | Zsh plugin manager.                                                          |
 
 ## Installation
 
