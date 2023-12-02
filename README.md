@@ -64,7 +64,7 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 | flake8                    | flake8                        | Tool for style guide enforcement in Python.                                  |
 | NVM                       | NVM                           | Node Version Manager for managing multiple Node.js versions.                 |
 | shellcheck                | shellcheck                    | Shell script analysis tool.                                                  |
-| WezTerm                   |  iTerm2 / WezTerm             | Terminals with ligatures and transparency support                            |
+| *WezTerm*                 |  *iTerm2* / WezTerm           | Terminals with ligatures and transparency support.                           |
 
 ### External Tools
 
