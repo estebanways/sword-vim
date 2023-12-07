@@ -18,7 +18,8 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 
 **Note:** The following list includes tools that may enhance the user experience but are not strictly prerequisites. Depending on your specific use case and preferences, you may choose to install some or all of these tools for improved functionality and convenience.
 
-### Neovim Build From Source
+<details>
+  <summary>Neovim Build From Source</summary>
 
 | GNU/Linux                 | MacOS                         | Description                                                                  |
 | --- | --- | --- |
@@ -36,7 +37,10 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 | unzip                     | unzip                         | Extraction utility for archives compressed in .zip format.                   |
 | doxygen                   | doxygen                       | Documentation system for C++, C, Java, Objective-C, and more.                |
 
-### Sword Vim
+</details>
+
+<details>
+  <summary>Sword Vim</summary>
 
 | GNU/Linux                 | MacOS                         | Description                                                                  |
 | --- | --- | --- |
@@ -52,7 +56,10 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 | xclip                     | xclip                         | Command line interface to X selections (clipboard).                          |
 | yarn                      | yarn                          | Alternative to NPM.                                                          |
 
-### Languages
+</details>
+
+<details>
+  <summary>Languages</summary>
 
 | GNU/Linux                 | MacOS                         | Description                                                                  |
 | --- | --- | --- |
@@ -62,7 +69,10 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 | shellcheck                | shellcheck                    | Shell script analysis tool.                                                  |
 | *WezTerm*                 |  *iTerm2* / WezTerm           | Terminals with ligatures and transparency support.                           |
 
-### External Tools
+</details>
+
+<details>
+  <summary>External Tools</summary>
 
 | GNU/Linux                 | MacOS                         | Description                                                                  |
 | --- | --- | --- |
@@ -78,7 +88,12 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 | tidy                      | tidy                          | HTML and XML syntax checker and validator.                                   |
 | zplug                     | zplug                         | Zsh plugin manager.                                                          |
 
+</details>
+
 ## Installation
+
+<details>
+  <summary>Steps</summary>
 
 1. **Requirements:**
    - Neovim: Ensure Neovim is installed on your system. You can typically install it using your system's package manager (e.g., `apt`, `brew`, `yum`). You can also build it from source for your specific OS.
@@ -143,6 +158,8 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 7. **Updates:**
    - Regularly update your plugins using your plugin manager.
    - Stay informed about changes in Neovim or your plugins that might affect your configuration.
+
+</details>
 
 ## Plugins Included
 
