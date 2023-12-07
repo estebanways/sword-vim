@@ -187,6 +187,7 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 |                              | [tyewang/vimux-jest-test](https://github.com/tyewang/vimux-jest-test)       | Jest test integration.                                      |
 |                              | [janko-m/vim-test](https://github.com/janko-m/vim-test)                     | Test runner for Vim.                                        |
 |                              | [diepm/vim-rest-console](https://github.com/diepm/vim-rest-console)         | REST console for sending requests and displaying responses. |
+|                              | [tpope/vim-dispatch](https://github.com/tpope/vim-dispatch)                 | Asynchronous task dispatcher for Vim.                       |
 | Syntax Plugins               | [sheerun/vim-polyglot](https://github.com/sheerun/vim-polyglot)             | Language pack for various languages.                        |
 |                              | [styled-components/vim-styled-components](https://github.com/styled-components/vim-styled-components) | Styled Components syntax highlighting. |
 |                              | [kovetskiy/vim-bash](https://github.com/kovetskiy/vim-bash)                 | Fixes syntax issues with bash files.                        |
