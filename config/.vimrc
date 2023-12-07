@@ -192,7 +192,7 @@ Plug 'prettier/vim-prettier', {
 Plug 'ap/vim-css-color'  " Color
 
 " ------------------------------------------------------------------------------
-" Plugins / Git / vim-dispatch
+" Plugins / Compilers / vim-dispatch
 " ------------------------------------------------------------------------------
 Plug 'tpope/vim-dispatch'  " Job dispatcher that uses asynchronous adapters
 
