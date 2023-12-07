@@ -12,11 +12,7 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 
 ## Screenshots
 
-[Key Mappings](./screenshots/mappings.png?raw=true) 📷 [Lists Finder](./screenshots/finder.png?raw=true) 📷 
-[Basic Debugging](./screenshots/debugging.png?raw=true) 📷 [Diagnostics Indicators](./screenshots/indicators.png?raw=true) 📷 
-[Code Analysis](./screenshots/analysis.png?raw=true) 📷 [Auto-completion and Suggestions](./screenshots/auto-completion.png?raw=true) 📷 
-[Focus Coding](./screenshots/focus.png?raw=true) 📷 [Split Windows](./screenshots/split-windows.png?raw=true) 📷 
-[REST Client](./screenshots/rest.png?raw=true) 📷 [Version Control](./screenshots/version-control.png?raw=true) 📷 [Themes](./screenshots/themes.png?raw=true)
+[Sessions Manager](./screenshots/sessions-manager.png?raw=true) 📷 [Key Mappings](./screenshots/mappings.png?raw=true) 📷 [Lists Finder](./screenshots/finder.png?raw=true) 📷 [Basic Debugging](./screenshots/debugging.png?raw=true) 📷 [Diagnostics Indicators](./screenshots/indicators.png?raw=true) 📷 [Code Analysis](./screenshots/analysis.png?raw=true) 📷 [Auto-completion and Suggestions](./screenshots/auto-completion.png?raw=true) 📷 [Focus Coding](./screenshots/focus.png?raw=true) 📷 [Split Windows](./screenshots/split-windows.png?raw=true) 📷 [REST Client](./screenshots/rest.png?raw=true) 📷 [Version Control](./screenshots/version-control.png?raw=true) 📷 [Themes](./screenshots/themes.png?raw=true)
 
 ## Prerequisites
 
@@ -200,6 +196,8 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 | Buffer Line Plugin           | [akinsho/bufferline.nvim](https://github.com/akinsho/bufferline.nvim)       | Snazzy buffer line with tabpage integration.                |
 | Dashboard Plugin             | [goolord/alpha-nvim](https://github.com/goolord/alpha-nvim)                 | Lua powered greeter like vim-startify/dashboard-nvim.       |
 | Fuzzy Finder Plugin          | [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) | Highly extendable fuzzy finder over lists.            |
+| Session Manager              | [mhinz/neovim-session-manager](https://github.com/Shatur/neovim-session-manager) | A session manager for Neovim.                           |
+| Telescope UI Select          | [nvim-telescope/telescope-ui-select.nvim](https://github.com/nvim-telescope/telescope-ui-select.nvim) | UI extension for telescope to easily select items. |
 | Keybinding Popup Plugin      | [folke/which-key.nvim](https://github.com/folke/which-key.nvim)             | Displays a popup with possible keybindings.                 |
 | Lazy Plugin Manager          | [folke/lazy.nvim](https://github.com/folke/lazy.nvim)                     | Modern plugin manager for Neovim (commented out in the code). |
 | Snippets Plugins             | [rafamadriz/friendly-snippets](https://github.com/rafamadriz/friendly-snippets) | Snippets collection for various programming languages.  |
