@@ -192,6 +192,11 @@ Plug 'prettier/vim-prettier', {
 Plug 'ap/vim-css-color'  " Color
 
 " ------------------------------------------------------------------------------
+" Plugins / Git / vim-dispatch
+" ------------------------------------------------------------------------------
+Plug 'tpope/vim-dispatch'  " Job dispatcher that uses asynchronous adapters
+
+" ------------------------------------------------------------------------------
 " Plugins / Git / vim-fugitive
 " ------------------------------------------------------------------------------
 Plug 'tpope/vim-fugitive'  " Git wrapper for Vim
@@ -639,8 +644,25 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 " ------------------------------------------------------------------------------
 " Plugin options / vim-fugitive
 " ------------------------------------------------------------------------------
-set diffopt+=vertical  " Fugitive always vertical diffing
-nnoremap <leader>gs :Git<CR>  " git status
+set diffopt+=vertical                         " Fugitive always vertical diffing
+
+" Shortcuts with two characters
+nnoremap <leader>gs :Git<CR>                  " Git status
+nnoremap <leader>gc :Gcommit -v -q<CR>        " Git commit with verbose and quiet
+                                              " options.
+nnoremap <leader>ga :Gcommit --amend<CR>      " Amend the last commit
+nnoremap <leader>gt :Gcommit -v -q %<CR>      " Git commit with verbose and quiet
+                                              " options for the current file.
+nnoremap <leader>gd :Gdiff<CR>                " View git diff
+nnoremap <leader>ge :Gedit<CR>                " Edit the current file in the index
+nnoremap <leader>gr :Gread<CR>                " Discard changes in the current
+                                              " file and reset to the index.
+nnoremap <leader>gw :Gwrite<CR><CR>           " Write and stage changes
+nnoremap <leader>gl :silent! Glog<CR>         " View the git log
+nnoremap <leader>gp :Ggrep<Space>             " Git grep
+nnoremap <leader>gm :Gmove<Space>             " Git move (rename)
+nnoremap <leader>gb :Git branch<Space>        " List git branches
+nnoremap <leader>go :Git checkout<Space>      " Git checkout
 
 " ------------------------------------------------------------------------------
 " Plugin options / vim-startify

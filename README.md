@@ -16,7 +16,7 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 [Basic Debugging](./screenshots/debugging.png?raw=true) 📷 [Diagnostics Indicators](./screenshots/indicators.png?raw=true) 📷 
 [Code Analysis](./screenshots/analysis.png?raw=true) 📷 [Auto-completion and Suggestions](./screenshots/auto-completion.png?raw=true) 📷 
 [Focus Coding](./screenshots/focus.png?raw=true) 📷 [Split Windows](./screenshots/split-windows.png?raw=true) 📷 
-[REST Client](./screenshots/rest.png?raw=true) 📷 [Themes](./screenshots/themes.png?raw=true)
+[REST Client](./screenshots/rest.png?raw=true) 📷 [Version Control](./screenshots/version-control.png?raw=true) 📷 [Themes](./screenshots/themes.png?raw=true)
 
 ## Prerequisites
 
@@ -187,6 +187,7 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 |                              | [tyewang/vimux-jest-test](https://github.com/tyewang/vimux-jest-test)       | Jest test integration.                                      |
 |                              | [janko-m/vim-test](https://github.com/janko-m/vim-test)                     | Test runner for Vim.                                        |
 |                              | [diepm/vim-rest-console](https://github.com/diepm/vim-rest-console)         | REST console for sending requests and displaying responses. |
+|                              | [tpope/vim-dispatch](https://github.com/tpope/vim-dispatch)                 | Asynchronous task dispatcher for Vim.                       |
 | Syntax Plugins               | [sheerun/vim-polyglot](https://github.com/sheerun/vim-polyglot)             | Language pack for various languages.                        |
 |                              | [styled-components/vim-styled-components](https://github.com/styled-components/vim-styled-components) | Styled Components syntax highlighting. |
 |                              | [kovetskiy/vim-bash](https://github.com/kovetskiy/vim-bash)                 | Fixes syntax issues with bash files.                        |
