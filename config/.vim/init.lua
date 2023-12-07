@@ -433,7 +433,7 @@ require("which-key").setup({
 })
 
 --------------------------------------------------------------------------------
--- Lua Plugins options neovim-session-manager
+-- Lua Plugins options / neovim-session-manager
 --------------------------------------------------------------------------------
 local Path = require('plenary.path')
 local config = require('session_manager.config')
