@@ -53,6 +53,16 @@ set spelllang=en_us         " Sets the spelling language for English (United Sta
 "set spelllang=es            " Sets the spelling language for Spanish
 set spell                   " Activates spelling
 
+" End of line and end of file:
+"setl ff=unix fixeol             " You want files in Unix format (every line NL
+                                 " terminated.)
+"setl ff=dos fixeol              " You want to use an old MS-DOS file in a modern
+                                 " environment.
+"setl ff=dos nofixeol noeol eof  " You want to drop the final <EOL> and add a final
+                                 " CTRL-Z.
+"setl nofixeol                   " You want to preserve the fileformat exactly as-is,
+                                 " including any final <EOL> and final CTRL-Z.
+
 " ------------------------------------------------------------------------------
 " Sources of the current file (done already in ~/.config/nvim/init.vim)
 " ------------------------------------------------------------------------------
@@ -102,7 +112,7 @@ Plug 'github/copilot.vim'  " GitHub's Copilot
 " ------------------------------------------------------------------------------
 " Plugins / Auto-complete / Codeium.vim
 " ------------------------------------------------------------------------------
-Plug 'Exafunction/codeium.vim', { 'branch': 'main' }
+"Plug 'Exafunction/codeium.vim', { 'branch': 'main' }
 
 " ------------------------------------------------------------------------------
 " Plugins / Snippets / Coc.nvim
