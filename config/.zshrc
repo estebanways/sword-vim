@@ -71,7 +71,6 @@ ZSH_THEME="nanotech"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
-
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -99,6 +98,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+export EDITOR="/usr/local/bin/nvim"
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
@@ -130,7 +131,7 @@ zplug "zsh-users/zsh-history-substring-search"
 zplug "Jxck/dotfiles", as:command, use:"bin/{histuniq,color}"
 
 # Can manage everything e.g., other person's zshrc
-#zplug "tcnksm/docker-alias", use:zshrc
+zplug "tcnksm/docker-alias", use:zshrc
 
 # Disable updates using the "frozen" tag
 zplug "k4rthik/git-cal", as:command, frozen:1
