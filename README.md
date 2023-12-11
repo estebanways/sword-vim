@@ -77,7 +77,7 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 | feh                       | feh                           | Fast and lightweight image viewer.                                           |
 | fzf                       | fzf                           | Fuzzy finder for the command-line.                                           |
 | jq                        | jq                            | Parsers and manipulates JSON data.                                           |
-| oh my zsh!                | oh my Zsh!                    | Zsh configuration framework.                                                 |
+| oh my zsh!                | oh my zsh!                    | Zsh configuration framework.                                                 |
 | tidy                      | tidy                          | HTML and XML syntax checker and validator.                                   |
 | vifm / nnn                | vifm / nnn                    | Terminal file manager.                                                       |
 | zplug                     | zplug                         | Zsh plugin manager.                                                          |
