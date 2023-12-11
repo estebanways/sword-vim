@@ -96,6 +96,8 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 | ristretto                 | -                             | Lightweight and fast image viewer for the Xfce desktop environment.          |
 | sxiv                      | Preview                       | Simple X Image Viewer.                                                       |
 
+</details>
+
 ## Installation
 
 <details>
