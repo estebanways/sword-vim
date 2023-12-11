@@ -79,7 +79,7 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 | jq                        | jq                            | Parsers and manipulates JSON data.                                           |
 | oh my zsh!                | oh my zsh!                    | Zsh configuration framework.                                                 |
 | tidy                      | tidy                          | HTML and XML syntax checker and validator.                                   |
-| vifm / nnn                | vifm / nnn                    | Terminal file manager.                                                       |
+| nnn / vifm                | nnn / vifm                    | Terminal file manager.                                                       |
 | zplug                     | zplug                         | Zsh plugin manager.                                                          |
 
 </details>
