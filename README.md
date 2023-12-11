@@ -30,7 +30,7 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 | g++                       | g++                           | GNU Compiler Collection - C++ compiler.                                      |
 | gettext                   | gettext                       | Tools for internationalization (i18n) and localization (l10n).               |
 | libtool                   | libtool                       | Generic library support script.                                              |
-| libtool-bin               | libtool                       | (See libtool).                                                               |
+| libtool-bin               | -                             | (See libtool).                                                               |
 | ninja-build               | ninja                         | Ninja build system.                                                          |
 | pkg-config                | pkg-config                    | System for managing library compile and link flags.                          |
 | s-tui                     | s-tui                         | Terminal UI for monitoring your computer's CPU temperature and more.         |
@@ -46,9 +46,9 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 | --- | --- | --- |
 | bash-language-server      | bash-language-server          | Language Server Protocol for Bash.                                           |
 | figlet                    | figlet                        | Program for making large letters out of ordinary text.                       |
-| node.js LTS               | node.js LTS                   | JavaScript runtime built on Chrome's V8 JavaScript engine.                   |
+| node.js lts               | node.js lts                   | JavaScript runtime built on Chrome's V8 JavaScript engine.                   |
 | npm                       | npm                           | Package manager for JavaScript.                                              |
-| Oh my Tmux!               | Oh my Tmux!                   | Tmux configuration framework.                                                |
+| oh my tmux!               | oh my tmux!                   | Tmux configuration framework.                                                |
 | pip                       | pip                           | Package installer for Python.                                                |
 | pip3                      | pip3                          | Package installer for Python 3.                                              |
 | pynvim                    | pynvim                        | Python client for Neovim.                                                    |
@@ -63,7 +63,7 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 | --- | --- | --- |
 | bats                      | bats                          | Bash Automated Testing System.                                               |
 | flake8                    | flake8                        | Tool for style guide enforcement in Python.                                  |
-| NVM                       | NVM                           | Node Version Manager for managing multiple Node.js versions.                 |
+| nvm                       | nvm                           | Node Version Manager for managing multiple Node.js versions.                 |
 | shellcheck                | shellcheck                    | Shell script analysis tool.                                                  |
 
 </details>
@@ -73,12 +73,13 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 
 | GNU/Linux                 | MacOS                         | Description                                                                  |
 | --- | --- | --- |
-| bat                       | bat                           | A cat clone with syntax highlighting and Git integration.                    |
+| batcat (bat)              | batcat (bat)                  | A cat clone with syntax highlighting and Git integration.                    |
 | feh                       | feh                           | Fast and lightweight image viewer.                                           |
 | fzf                       | fzf                           | Fuzzy finder for the command-line.                                           |
 | jq                        | jq                            | Parsers and manipulates JSON data.                                           |
-| Oh my Zsh!                | Oh my Zsh!                    | Zsh configuration framework.                                                 |
+| oh my zsh!                | oh my Zsh!                    | Zsh configuration framework.                                                 |
 | tidy                      | tidy                          | HTML and XML syntax checker and validator.                                   |
+| vifm / nnn                | vifm / nnn                    | Terminal file manager.                                                       |
 | zplug                     | zplug                         | Zsh plugin manager.                                                          |
 
 </details>
@@ -86,15 +87,13 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 <details>
   <summary>Graphical Mode Tools</summary>
 
-| GNU/Linux                 | MacOS                         | Description                                                                  |
+| GNU/Linux                    | MacOS                           | Description                                                                  |
 | --- | --- | --- |
-| WezTerm / Kitty           | iTerm2 / WezTerm / Kitty      | Terminals with fonts with ligatures support and transparency support.        |
-| wl-clipboard              | wl-clipboard                  | Wayland clipboard utilities.                                                 |
-| xclip                     | xclip                         | Command line interface to X selections (clipboard).                          |
-| qiv                       | Preview                       | Quick Image Viewer.                                                          |
-| ripgrep                   | Preview                       | Line-oriented search tool that recursively searches your current directory.  |
-| ristretto                 | -                             | Lightweight and fast image viewer for the Xfce desktop environment.          |
-| sxiv                      | Preview                       | Simple X Image Viewer.                                                       |
+| wezterm / kitty              | open (iTerm2) / wezterm / kitty | Terminals with fonts with ligatures support and transparency support.        |
+| wl-clipboard                 | wl-clipboard                    | Wayland clipboard utilities.                                                 |
+| xclip                        | xclip                           | Command line interface to X selections (clipboard).                          |
+| feh / qiv / sxiv / ristretto | open (Preview)                  | Quick and simple Image Viewer.                                               |
+| ig (ripgrep)                 | ig (ripgrep)                    | Line-oriented search tool that recursively searches your current directory.  |
 
 </details>
 
