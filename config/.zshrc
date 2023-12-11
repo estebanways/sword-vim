@@ -99,7 +99,12 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Set Neovim as default text editor
 export EDITOR="/usr/local/bin/nvim"
+
+# NNN plugins
+export NNN_PLUG='f:finder;o:fzopen;p:mocq;d:diffs;t:nmount;v:imgview;r:preview-tui'
+export NNN_FIFO=/tmp/nnn.fifo
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
@@ -201,7 +206,9 @@ fi
 # Then, source plugins and add commands to $PATH
 zplug load --verbose
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 
 # The Commbase App directory for the Z shell
 export COMMBASE_APP_DIR="/home/esteban/Developer/mydroidandi/commbase"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
