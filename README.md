@@ -52,8 +52,6 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 | pip                       | pip                           | Package installer for Python.                                                |
 | pip3                      | pip3                          | Package installer for Python 3.                                              |
 | pynvim                    | pynvim                        | Python client for Neovim.                                                    |
-| wl-clipboard              | wl-clipboard                  | Wayland clipboard utilities.                                                 |
-| xclip                     | xclip                         | Command line interface to X selections (clipboard).                          |
 | yarn                      | yarn                          | Alternative to NPM.                                                          |
 
 </details>
@@ -67,7 +65,6 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 | flake8                    | flake8                        | Tool for style guide enforcement in Python.                                  |
 | NVM                       | NVM                           | Node Version Manager for managing multiple Node.js versions.                 |
 | shellcheck                | shellcheck                    | Shell script analysis tool.                                                  |
-| *WezTerm*                 |  *iTerm2* / WezTerm           | Terminals with fonts with ligatures support and transparency support.            |
 
 </details>
 
@@ -81,14 +78,23 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 | fzf                       | fzf                           | Fuzzy finder for the command-line.                                           |
 | jq                        | jq                            | Parsers and manipulates JSON data.                                           |
 | Oh my Zsh!                | Oh my Zsh!                    | Zsh configuration framework.                                                 |
-| qiv                       | qiv                           | Quick Image Viewer.                                                          |
-| ripgrep                   | ripgrep                       | Line-oriented search tool that recursively searches your current directory.  |
-| ristretto                 | ristretto                     | Lightweight and fast image viewer for the Xfce desktop environment.          |
-| sxiv                      | sxiv                          | Simple X Image Viewer.                                                       |
 | tidy                      | tidy                          | HTML and XML syntax checker and validator.                                   |
 | zplug                     | zplug                         | Zsh plugin manager.                                                          |
 
 </details>
+
+<details>
+  <summary>Graphical Mode Tools</summary>
+
+| GNU/Linux                 | MacOS                         | Description                                                                  |
+| --- | --- | --- |
+| *WezTerm / Kitty*           | *iTerm2* / WezTerm / Kitty      | Terminals with fonts with ligatures support and transparency support.        |
+| wl-clipboard              | wl-clipboard                  | Wayland clipboard utilities.                                                 |
+| xclip                     | xclip                         | Command line interface to X selections (clipboard).                          |
+| qiv                       | Preview                       | Quick Image Viewer.                                                          |
+| ripgrep                   | Preview                       | Line-oriented search tool that recursively searches your current directory.  |
+| ristretto                 | -                             | Lightweight and fast image viewer for the Xfce desktop environment.          |
+| sxiv                      | Preview                       | Simple X Image Viewer.                                                       |
 
 ## Installation
 
