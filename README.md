@@ -31,7 +31,7 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 | gettext                   | gettext                       | Tools for internationalization (i18n) and localization (l10n).               |
 | libtool                   | libtool                       | Generic library support script.                                              |
 | libtool-bin               | libtool                       | (See libtool).                                                               |
-| ninja-build               | *ninja*                         | Ninja build system.                                                          |
+| ninja-build               | ninja                         | Ninja build system.                                                          |
 | pkg-config                | pkg-config                    | System for managing library compile and link flags.                          |
 | s-tui                     | s-tui                         | Terminal UI for monitoring your computer's CPU temperature and more.         |
 | unzip                     | unzip                         | Extraction utility for archives compressed in .zip format.                   |
