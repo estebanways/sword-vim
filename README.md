@@ -87,13 +87,13 @@ A lightweight Vim/Neovim text editor and IDE designed for simplicity and efficie
 <details>
   <summary>Graphical Mode Tools</summary>
 
-| GNU/Linux                    | MacOS                           | Description                                                                  |
+| GNU/Linux                    | MacOS                            | Description                                                                  |
 | --- | --- | --- |
-| wezterm / kitty              | open (iTerm2) / wezterm / kitty | Terminals with fonts with ligatures support and transparency support.        |
-| wl-clipboard                 | wl-clipboard                    | Wayland clipboard utilities.                                                 |
-| xclip                        | xclip                           | Command line interface to X selections (clipboard).                          |
-| feh / qiv / sxiv / ristretto | open (Preview)                  | Quick and simple Image Viewer.                                               |
-| ig (ripgrep)                 | ig (ripgrep)                    | Line-oriented search tool that recursively searches your current directory.  |
+| wezterm / kitty              | open (iTerm2) / wezterm / kitty  | Terminals with fonts with ligatures support and transparency support.        |
+| wl-clipboard                 | wl-clipboard                     | Wayland clipboard utilities.                                                 |
+| xclip / xsel                 | pbcopy, pbpaste, tmux-pasteboard | Command line interface to X selections (clipboard).                          |
+| feh / qiv / sxiv / ristretto | open (Preview)                   | Quick and simple Image Viewer.                                               |
+| ig (ripgrep)                 | ig (ripgrep)                     | Line-oriented search tool that recursively searches your current directory.  |
 
 </details>
 
